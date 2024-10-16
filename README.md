@@ -9,7 +9,6 @@ To write new documentation [follow this guide](doc/TODO).
 - [Welcome!](#welcome)
 - [Table of content](#table-of-content)
 - [General information](#general-information)
-- [To setup your computer for development, read this page. The rest of the documentation takes for granted that you are all set up.](#to-setup-your-computer-for-development-read-this-page-the-rest-of-the-documentation-takes-for-granted-that-you-are-all-set-up)
   - [Useful links](#useful-links)
   - [Task tracking and team organisation](#task-tracking-and-team-organisation)
   - [Architecture](#architecture)
@@ -23,7 +22,17 @@ To write new documentation [follow this guide](doc/TODO).
 
 # General information
 
+<<<<<<< Updated upstream
 # To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
+=======
+To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
+
+<<<<<<<
+
+=======
+>>>>>>> Stashed changes
+
+>>>>>>>
 
 ## Useful links
 
