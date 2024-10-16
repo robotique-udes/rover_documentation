@@ -13,17 +13,17 @@
   - [Use full namespace](#use-full-namespace)
     - [Do:](#do-2)
     - [Avoid:](#avoid-2)
-  - [Use the *this-\>* pointer when calling a method from inside it's own class](#use-the-this--pointer-when-calling-a-method-from-inside-its-own-class)
+  - [Use the _this-\>_ pointer when calling a method from inside it's own class](#use-the-this--pointer-when-calling-a-method-from-inside-its-own-class)
     - [do:](#do-3)
     - [Avoid:](#avoid-3)
   - [Always specified the void argument in function with "no arguments"](#always-specified-the-void-argument-in-function-with-no-arguments)
     - [do:](#do-4)
     - [avoid:](#avoid-4)
   - [Use .hpp and .cpp file extension if using cpp feature](#use-hpp-and-cpp-file-extension-if-using-cpp-feature)
-  - [Enum should always be of type *enum class*](#enum-should-always-be-of-type-enum-class)
+  - [Enum should always be of type _enum class_](#enum-should-always-be-of-type-enum-class)
     - [do:](#do-5)
     - [avoid:](#avoid-5)
-  - [Enum class should only be casted into their underlying *int* type](#enum-class-should-only-be-casted-into-their-underlying-int-type)
+  - [Enum class should only be casted into their underlying _int_ type](#enum-class-should-only-be-casted-into-their-underlying-int-type)
     - [do:](#do-6)
     - [avoid:](#avoid-6)
   - [Macros](#macros)
@@ -56,32 +56,34 @@ Guidelines are there to help organise and increase readability and maintainabili
 
 ## CPP Naming Style
 
-| Type of data         | Styling               | Example          |
-|----------------------|-----------------------|------------------|
-| variable             | camelCase             | ```myInt```      |
-| function name        | camelCase             | ```myFunc()```   |
-| class and namespaces | PascalCase            | ```MyClass```    |
-| Macro                | UPPER_CASE_SNAKE_CASE | ```MY_MACRO()``` |
-| Constant and define  | UPPER_CASE_SNAKE_CASE | ```PI```         |
-| Enum elements        | UPPER_CASE_SNAKE_CASE | ```FIRST_ELEM``` |
+| Type of data         | Styling               | Example      |
+| -------------------- | --------------------- | ------------ |
+| variable             | camelCase             | `myInt`      |
+| function name        | camelCase             | `myFunc()`   |
+| class and namespaces | PascalCase            | `MyClass`    |
+| Macro                | UPPER_CASE_SNAKE_CASE | `MY_MACRO()` |
+| Constant and define  | UPPER_CASE_SNAKE_CASE | `PI`         |
+| Enum elements        | UPPER_CASE_SNAKE_CASE | `FIRST_ELEM` |
 
-### Prefix and suffix 
-| Type of data            | Styling         | Example                |
-|-------------------------|-----------------|------------------------|
-| Argument name           | camelCase_      | ```myArg_ ```          |                 
-| Reference               | rPascalCase_    | ```rMyRef```           |
-| Pointers                | pPascalCase_    | ```pMyPointer```       |
-| private member variable | _camelCase      | ```_myPrivateMember``` |
-| global variable         | g_camelCase     | ```g_myInt```          |
-| Struct                  | sPascalCase     | ```sMyStruct```        |
-| Enum                    | ePascalCase     | ```eMyEnum```          |
-| ROS Subscriber          | sub_camelCase   | ```sub_mySrg```        |
-| ROS Publisher           | pub_camelCase   | ```pub_mySrg```        |
-| ROS Timer               | timer_camelCase | ```timer_mySrg```      |
+### Prefix and suffix
+
+| Type of data            | Styling         | Example            |
+| ----------------------- | --------------- | ------------------ |
+| Argument name           | camelCase\_     | `myArg_ `          |
+| Reference               | rPascalCase\_   | `rMyRef`           |
+| Pointers                | pPascalCase\_   | `pMyPointer`       |
+| private member variable | \_camelCase     | `_myPrivateMember` |
+| global variable         | g_camelCase     | `g_myInt`          |
+| Struct                  | sPascalCase     | `sMyStruct`        |
+| Enum                    | ePascalCase     | `eMyEnum`          |
+| ROS Subscriber          | sub_camelCase   | `sub_mySrg`        |
+| ROS Publisher           | pub_camelCase   | `pub_mySrg`        |
+| ROS Timer               | timer_camelCase | `timer_mySrg`      |
 
 ## Use Allman brackets style
 
 ### do:
+
 ```cpp
 if (something)
 {
@@ -90,6 +92,7 @@ if (something)
 ```
 
 ### avoid:
+
 ```cpp
 if (something) {
   doSomethingElse();
@@ -97,9 +100,11 @@ if (something) {
 ```
 
 ## Do not use dynamic allocation on microcontrollers
-Using dynamic allocation can fragment the heap memory ([more info](https://stackoverflow.com/questions/3770457/what-is-memory-fragmentation)), it's generally always a bad idea on systems which requires a high level of reliability for long periods of time with low memory footprint. For this reason, the use of the *new*, *delete*, *std::share_ptr*, *std::unique_ptr*, etc. is discouraged on the rover. The std library uses a lot of dynamic allocation so it's generally a bad idea to use it.
+
+Using dynamic allocation can fragment the heap memory ([more info](https://stackoverflow.com/questions/3770457/what-is-memory-fragmentation)), it's generally always a bad idea on systems which requires a high level of reliability for long periods of time with low memory footprint. For this reason, the use of the _new_, _delete_, _std::share_ptr_, _std::unique_ptr_, etc. is discouraged on the rover. The std library uses a lot of dynamic allocation so it's generally a bad idea to use it.
 
 ### Do:
+
 ```cpp
 int8_t myInt = 8;
 int8_t* myIntPtr = &myInt;
@@ -113,6 +118,7 @@ printf("%i", myArray[2]);
 ```
 
 ### Avoid:
+
 ```cpp
 int8_t* myInt = new int; // Using dynamic allocation
 *myInt = 6;
@@ -126,6 +132,7 @@ myVector.append(1);
 myVector.append(2);
 myVector.append(3);
 ```
+
 On ROS code it's tolerated when it make the code easier to maintain and easier to read. ROS is also full of dynamic allocation and the rover computer has 16gb of RAM.
 
 ## Use full namespace
@@ -165,23 +172,28 @@ using RoverCanLib::Constant::eDeviceId;
 [...]
 ```
 
-## Use the *this->* pointer when calling a method from inside it's own class
+## Use the _this->_ pointer when calling a method from inside it's own class
 
 ### do:
+
 ```cpp
 // inside a class
 calculateSpeed(this->getPosition());
 ```
 
 ### Avoid:
+
 ```cpp
 // inside a class
 calculateSpeed(getPosition()); // It's ambiguous if getPosition is a method from the class or a global function
 ```
 
 ## Always specified the void argument in function with "no arguments"
+
 [Learn why it's better](https://www.reddit.com/r/C_Programming/comments/6ylpct/should_i_use_the_void_keyword_in_functions_that/)
+
 ### do:
+
 ```cpp
 void doNothing(void)
 {
@@ -190,6 +202,7 @@ void doNothing(void)
 ```
 
 ### avoid:
+
 ```cpp
 void doNothing()
 {
@@ -198,17 +211,20 @@ void doNothing()
 ```
 
 ## Use .hpp and .cpp file extension if using cpp feature
+
 Example for a class named MyClass
+
 ```cpp
 my_class.hpp
 my_class.cpp
 ```
 
-## Enum should always be of type *enum class*
+## Enum should always be of type _enum class_
 
 Enum class allows users to scope enums and force the use of enum members from their namespace
 
 ### do:
+
 ```cpp
 enum class eDataIndex : uint8_t // Forcing a enum size (by it's type) is a good practice
 {
@@ -222,6 +238,7 @@ msg[(uint8_t)eDataIndex::MSG_CONTENT_ID] = someDeviceId;
 ```
 
 ### avoid:
+
 ```cpp
 enum eDataIndex : uint8_t
 {
@@ -231,12 +248,13 @@ enum eDataIndex : uint8_t
 };
 
 uint8_t msg[MSG_LENGTH] = {0};
-msg[MSG_CONTENT_ID] = someDeviceId; // Where MSG_CONTENT_ID is ambiguous 
+msg[MSG_CONTENT_ID] = someDeviceId; // Where MSG_CONTENT_ID is ambiguous
 ```
 
-## Enum class should only be casted into their underlying *int* type
+## Enum class should only be casted into their underlying _int_ type
 
 ### do:
+
 ```cpp
 enum class eDataIndex : uint8_t // Defining type: uint8_t
 {
@@ -250,6 +268,7 @@ msg[(uint8_t)eDataIndex::MSG_CONTENT_ID] = someDeviceId; // Casting into uint8_t
 ```
 
 ### avoid:
+
 ```cpp
 enum class eDataIndex : uint8_t // Defining type: uint8_t
 {
@@ -267,10 +286,11 @@ msg[(uint16_t)eDataIndex::MSG_CONTENT_ID] = someDeviceId; // Casting into uint16
 Macro can be written using either #defines or the constexpr keyword. The constexpr keyword is generally suggested as it's safer, easier to write and to read. But both can be used:
 
 ### example:
+
 ```cpp
 #define SQUARE(x) ((x) * (x))
 
-constexpr int SQUARE(int x) 
+constexpr int SQUARE(int x)
 {
     return x * x;
 }
@@ -282,6 +302,7 @@ constexpr int SQUARE(int x)
 Constexpr are suggested over #define because they can be scoped inside class or namespace which make their use less ambiguous. They also have a type which make type mistakes less likely then defines. Both are still tolerated and used in our codebase.
 
 ### do:
+
 ```cpp
 #define PHIL
 
@@ -293,7 +314,9 @@ namespace KEYBINDING
 [...]
 }
 ```
+
 ### avoid:
+
 ```cpp
 #define JOINT_SELECT_DEC rover_msgs::msg::Joy::CROSS_DOWN; // Tolerated
 const uint8_t JOINT_SELECT_INC = rover_msgs::msg::Joy::CROSS_UP; // Don't
@@ -302,6 +325,7 @@ const uint8_t JOINT_SELECT_INC = rover_msgs::msg::Joy::CROSS_UP; // Don't
 ## Use available logger instead of normal printf/Serial.print
 
 ### do:
+
 ```cpp
 // On microcontroller projects:
 LOG(INFO, "Printing a number: %u as info", 4u);
@@ -314,7 +338,8 @@ RCLCPP_INFO(rclcpp::get_logger("Relevant Name"), "Printing a number %u as info",
 ```
 
 ### avoid:
- ```cpp
+
+```cpp
 // On microcontroller projects:
 Serial.printf("Printing a number: %u", 4u);
 
@@ -325,6 +350,7 @@ printf("Printing a number %u", 4u);
 ## Use curly brackets for one line nested block
 
 ### do:
+
 ```cpp
 if (you.hasAnswer())
 {
@@ -337,6 +363,7 @@ else
 ```
 
 ### avoid:
+
 ```cpp
 if (you.hasAnswer())
     you.postAnswer();
@@ -347,13 +374,15 @@ else
 ## Comments shouldn't overshoot the 80 character line
 
 ### do:
+
 ```cpp
-//                                                                            80                                        
-// This is quite a long comment which is alright but only if it's set on       | 
+//                                                                            80
+// This is quite a long comment which is alright but only if it's set on       |
 // multiple lines which none overshoots the 80 character limit                 |
 ```
 
 ### avoid:
+
 ```cpp
 //                                                                             |
 // This is quite a long comment which is alright but only if it's set on multip|le lines which none overshoots the 80 character limit
@@ -361,6 +390,7 @@ else
 ```
 
 To add the line in your vscode do the following:
+
 - ctrl+shift+p
 - Search for: "Preferences: Open User Settings (JSON)
 - Add these lines as a new entry:
@@ -373,11 +403,13 @@ To add the line in your vscode do the following:
 ```
 
 ## Code shouldn't overshoot the 120 character line
-When breaking on multiple line, make sure all elements take only one line. For example don't put 1 argument on the first line and 2 on the second. Use 3 lines to one for each arguments  
+
+When breaking on multiple line, make sure all elements take only one line. For example don't put 1 argument on the first line and 2 on the second. Use 3 lines to one for each arguments
 
 ### do:
+
 ```cpp
-                                                                                                                     120                                       
+                                                                                                                     120
 CanDevice(uint16_t id_,                                                                                                |
           CanMaster *canMasterPtr_,                                                                                    |
           void (CanMaster::*callback_)(uint16_t id_, const can_frame *frameMsg_),                                      |
@@ -385,13 +417,15 @@ CanDevice(uint16_t id_,                                                         
 ```
 
 ### avoid:
+
 ```cpp
-                                                                                                                     120                                       
-CanDevice(uint16_t id_, CanMaster *canMasterPtr_, void (CanMaster::*callback_)(uint16_t id_, const can_frame *frameMsg_|), rclcpp::Publisher<rover_msgs::msg::CanDeviceStatus>::SharedPtr pub_CanBusState_)                                                                                                      
+                                                                                                                     120
+CanDevice(uint16_t id_, CanMaster *canMasterPtr_, void (CanMaster::*callback_)(uint16_t id_, const can_frame *frameMsg_|), rclcpp::Publisher<rover_msgs::msg::CanDeviceStatus>::SharedPtr pub_CanBusState_)
                                                                                                                        |
 ```
 
 To add the line in your vscode do the following:
+
 - ctrl+shift+p
 - Search for: "Preferences: Open User Settings (JSON)
 - Add these lines as a new entry:
@@ -402,6 +436,7 @@ To add the line in your vscode do the following:
         120
     ],
 ```
+
 80 for comments and 120 for code
 
 ## Prefer lambda function over std::bind
@@ -409,6 +444,7 @@ To add the line in your vscode do the following:
 Lambda function are often simpler and use less overhead.
 
 ### do:
+
 ```cpp
 _sub_joyArm = this->create_subscription<rover_msgs::msg::Joy>("/rover/arm/joy",
                                                               1,
@@ -417,6 +453,7 @@ _sub_joyArm = this->create_subscription<rover_msgs::msg::Joy>("/rover/arm/joy",
 ```
 
 ### avoid:
+
 ```cpp
 _sub_joyArm = this->create_subscription<rover_msgs::msg::Joy>("/rover/arm/joy",
                                                               1,
@@ -424,9 +461,11 @@ _sub_joyArm = this->create_subscription<rover_msgs::msg::Joy>("/rover/arm/joy",
 ```
 
 ## Prefer passing by reference when pointer can't be null
+
 Makes it simpler and safer
 
 ### do:
+
 ```cpp
 void myFunc(float &rValue)
 {
@@ -436,6 +475,7 @@ void myFunc(float &rValue)
 ```
 
 ### avoid:
+
 ```cpp
 void myFunc(float *pValue)
 {

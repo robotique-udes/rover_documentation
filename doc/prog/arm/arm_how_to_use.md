@@ -1,18 +1,18 @@
 # WARNING
 
-This file needs a big overhaul. Outdated information was removed and this is why there's a lot of holes but don't expect all remaining information to be accurate 
+This file needs a big overhaul. Outdated information was removed and this is why there's a lot of holes but don't expect all remaining information to be accurate
 
 ## Run simulation with rover_helper
 
 ### Run the following command to start rviz with rover_helper nodes
 
-   **As of right now**, arm simulation is in an unstable state and needs to be reworked.
+**As of right now**, arm simulation is in an unstable state and needs to be reworked.
 
-   ```Bash
-   ros2 launch rover_helper rover.launch.py simulate_arm:=true
-   ```
+```Bash
+ros2 launch rover_helper rover.launch.py simulate_arm:=true
+```
 
-   The simulation is set to false by default. Launching rover.launch.py without any arguments will launch all nodes except simulation.
+The simulation is set to false by default. Launching rover.launch.py without any arguments will launch all nodes except simulation.
 
 # Controls
 
@@ -53,6 +53,7 @@ The following equations were built with the help of MotionGenesis.
 ### Joint Position from center of the arm linear actuator (Bases)
 
 #### J0
+
 ```yaml
 - x: 0
 - y: q0
@@ -60,6 +61,7 @@ The following equations were built with the help of MotionGenesis.
 ```
 
 #### J1
+
 ```yaml
 - x: J0x
 - y: J0y + q0
@@ -67,6 +69,7 @@ The following equations were built with the help of MotionGenesis.
 ```
 
 #### J2
+
 ```yaml
 - x: J0x + J1x*cos(q1) - J1y*sin(q1)
 - y: J0y + q0 + J1x*sin(q1) + J1y*cos(q1)
@@ -74,6 +77,7 @@ The following equations were built with the help of MotionGenesis.
 ```
 
 #### J3
+
 ```yaml
 - x: J0x + J1x*cos(q1) + J2x*cos(q1)*cos(0.5*PI-q2) + J2z*cos(q1)*sin(0.5*PI-q2) - sin(q1)*(J1y+J2y)
 - y: J0y + q0 + J1x*sin(q1) + cos(q1)*(J1y+J2y) + J2x*sin(q1)*cos(0.5*PI-q2) + J2z*sin(q1)*sin(0.5*PI-q2)
@@ -81,6 +85,7 @@ The following equations were built with the help of MotionGenesis.
 ```
 
 #### J4
+
 ```yaml
 - x: J0x + J1x*cos(q1) + J2x*cos(q1)*cos(0.5*PI-q2) + J2z*cos(q1)*sin(0.5*PI-q2) + J3x*cos(q1)*cos(0.5*PI-q2-q3) + J3z*cos(q1)*sin(0.5*PI-q2-q3) - J3y*sin(q1) - sin(q1)*(J1y+J2y)
 - y: J0y + q0 + J1x*sin(q1) + cos(q1)*(J1y+J2y) + J2x*sin(q1)*cos(0.5*PI-q2) + J2z*sin(q1)*sin(0.5*PI-q2) + J3x*sin(q1)*cos(0.5*PI-q2-q3) + J3z*sin(q1)*sin(0.5*PI-q2-q3)
@@ -88,6 +93,7 @@ The following equations were built with the help of MotionGenesis.
 ```
 
 #### End Effector Position (Po)
+
 ```yaml
 - x: J0x + J1x*cos(q1) + J2x*cos(q1)*cos(0.5*PI-q2) + J2z*cos(q1)*sin(0.5*PI-q2) + J3x*cos(q1)*cos(0.5*PI-q2-q3) + J3z*cos(q1)*sin(0.5*PI-q2-q3) - sin(q1)*(J1y+J2y) + J4x*sin(q1)*cos(0.5*PI-q2-q3-q4) + J4z*sin(q1)*sin(0.5*PI-q2-q3-q4)
 - y: J0y + q0 + J1x*sin(q1) + cos(q1)*(J1y+J2y) + J2x*sin(q1)*cos(0.5*PI-q2) + J2z*sin(q1)*sin(0.5*PI-q2) + J3x*sin(q1)*cos(0.5*PI-q2-q3) + J3z*sin(q1)*sin(0.5*PI-q2-q3) + J4x*sin(q1)*cos(0.5*PI-q2-q3-q4) + J4z*sin(q1)*sin(0.5*PI-q2-q3-q4)
@@ -95,6 +101,7 @@ The following equations were built with the help of MotionGenesis.
 ```
 
 ### Orientation Angles
+
 ```yaml
 - Alpha: acos(cos(0.5*PI-q2-q3-q4)) # (angle between Pz and nz)
 - Psi: acos(cos(q1)) # (angle between Py and ny)

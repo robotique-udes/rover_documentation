@@ -1,10 +1,11 @@
 # Electric Standard
+
 - [Electric Standard](#electric-standard)
   - [Low Current connectors and wire (\<1A)](#low-current-connectors-and-wire-1a)
     - [Conventions](#conventions)
       - [Color Code](#color-code)
   - [High Current connectors and wire (\> 1A)](#high-current-connectors-and-wire--1a)
-      - [Color Code](#color-code-1)
+    - [Color Code](#color-code-1)
     - [Connectors](#connectors)
     - [Wires](#wires)
 
@@ -20,7 +21,7 @@ We'll always use the T-568B wire convention but it isn't necessary for our use. 
     <img src="../img/RJ45_pinout.png" alt="T-568B" class="center" style="width:500px;"/>
 </center>
 
-Below is the rovus custom PINOUT that should be respected as much as possible*:
+Below is the rovus custom PINOUT that should be respected as much as possible\*:
 
     - 1 -> CAN_H
     - 2 -> CAN_L
@@ -31,7 +32,7 @@ Below is the rovus custom PINOUT that should be respected as much as possible*:
     - 7 -> VCC (according to color code) (24V, 12V, 5V, 3.3V)
     - 8 -> GND
 
-*If needed, you can overwrite the convention but only if you use RED ethernet cables with the custom pinout p-touched and clearly identified at both ends of the wire.
+\*If needed, you can overwrite the convention but only if you use RED ethernet cables with the custom pinout p-touched and clearly identified at both ends of the wire.
 
 #### Color Code
 
@@ -41,31 +42,32 @@ Below is the rovus custom PINOUT that should be respected as much as possible*:
     - GREEN = 3.3V
     - BLACK = Regular Ethernet
 
-*24V Ethernet should only be POE injected and used as networking cables.
+\*24V Ethernet should only be POE injected and used as networking cables.
 
 ## High Current connectors and wire (> 1A)
 
 #### Color Code
+
     - RED = Unregulated 24V
     - YELLOW = Regulated 12V
     - BLUE = Regulated 5V
     - GREEN = Regulated 3.3V
 
-*If needed, you can overwrite the convention but only if you use BLACK cables assemblies and p-touched clearly identified at both ends of the wire.
+\*If needed, you can overwrite the convention but only if you use BLACK cables assemblies and p-touched clearly identified at both ends of the wire.
 
 ### Connectors
 
 Follow this table to choose the correct connector
 
 | Max Current | Connector Type |
-|-------------|----------------|
+| ----------- | -------------- |
 | <30         | XT-30          |
 | 30-60       | XT-60          |
 | 60-90       | XT-90          |
 | 90-120      | EC5            |
 | Don't       | QS8-S          |
 
-For voltages exceeding about 18V please try to use spark proof connectors. They are often identified by a green mark on XT-* or a red mark on QS8-S.
+For voltages exceeding about 18V please try to use spark proof connectors. They are often identified by a green mark on XT-\* or a red mark on QS8-S.
 
 ### Wires
 

@@ -14,8 +14,8 @@ This repo contains all microcontroller projects of the rovus team. **Warning: th
       - [Platformio.ini ESP32-S2 (Development board)](#platformioini-esp32-s2-development-board)
       - [Platformio.ini ESP32-S3 (Custom PCB)](#platformioini-esp32-s3-custom-pcb)
     - [Development](#development)
-      - [lib\_rover](#lib_rover)
-      - [rover\_can\_lib](#rover_can_lib)
+      - [lib_rover](#lib_rover)
+      - [rover_can_lib](#rover_can_lib)
   - [ESP32 MicroRos (last resort)](#esp32-microros-last-resort)
     - [Guidelines](#guidelines)
     - [MicroRos Setup](#microros-setup)
@@ -24,13 +24,13 @@ This repo contains all microcontroller projects of the rovus team. **Warning: th
     - [Connecting the ESP to the ROS network](#connecting-the-esp-to-the-ros-network)
     - [Logging](#logging)
       - [Usage](#usage)
-    - [Including custom msgs from rover\_msgs package](#including-custom-msgs-from-rover_msgs-package)
+    - [Including custom msgs from rover_msgs package](#including-custom-msgs-from-rover_msgs-package)
     - [Platformio project folder structure example](#platformio-project-folder-structure-example)
 
 ## General guidelines
 
 - Don't use MicroRos if possible.
-- Use ESP32-* for all microcontrollers projects
+- Use ESP32-\* for all microcontrollers projects
 - Develop in VSCode with platformIO
 - Run your serial ports at 115200 baud
 - Limit dynamic allocation and follow embedded coding guidelines as much as you can ([see our coding guidelines](../how_to/coding%20guidelines.md))
@@ -45,11 +45,11 @@ This repo contains all microcontroller projects of the rovus team. **Warning: th
     ├── project2
     ├── project3
     ├── ...
-    ├── templates # Used to be more relevant when using MicroROS 
+    ├── templates # Used to be more relevant when using MicroROS
     └── lib/
         ├── lib_rover # helpers
         ├── rover_can_lib # canbus
-        └── rover_micro_ros_lib # Used to be more relevant when using MicroROS 
+        └── rover_micro_ros_lib # Used to be more relevant when using MicroROS
 ```
 
 ### Development board buying guide
@@ -59,7 +59,7 @@ When buying ESP32 or any microcontrollers, make sure it comes with a unique USB 
 - Safe bets:
   - CH9102X
 - To avoid:
-  - CP2102*
+  - CP2102\*
   - CH430
 
 To order: <https://fr.aliexpress.com/item/1005005906529113.html>
@@ -85,7 +85,7 @@ framework = arduino
 monitor_speed = 115200
 monitor_raw = true
 
-lib_deps = 
+lib_deps =
     rover_can_lib=symlink://../lib/rover_can_lib
     lib_rover=symlink://../lib/lib_rover
 
@@ -95,7 +95,7 @@ build_unflags =
     -w CCFLAGS
     -std=gnu++11
 
-build_flags = 
+build_flags =
   -Wall
   -Wextra
 
@@ -117,7 +117,7 @@ framework = arduino
 monitor_speed = 115200
 monitor_raw = true
 
-lib_deps = 
+lib_deps =
     rover_can_lib=symlink://../lib/rover_can_lib
     lib_rover=symlink://../lib/lib_rover
 
@@ -132,7 +132,7 @@ build_flags =
     -Wextra
 
     ; Make sure to use the internal USB driver on the ESP32-S3 instead of a
-    ; standard UART interface 
+    ; standard UART interface
     '-D ARDUINO_USB_CDC_ON_BOOT=1'
     '-D ARDUINO_USB_MODE=1'
 
@@ -173,7 +173,7 @@ lib/
   - This is where systems are located. For example: a "revolute joint" system would be composed of actuators and sensors. Systems can also include other system, for example a "robotic arm" system could be composed of multiple "revolute joint" systems.
 - Rover_helpers
   - Includes multiple simple classes to help development and aid with code readability and consistency (between project). It includes, but is not limited to;
-    - A Timer for constant* loop interval
+    - A Timer for constant\* loop interval
     - A Chrono for time measurement
     - Led Blinkers for making led pattern easily (software and hardware version available)
     - A Logger which is similar to the ROS logging mechanisms
@@ -252,16 +252,16 @@ monitor_speed = 115200 ; monitor baud rate
 monitor_raw = true ; allow colors inside terminal
 
 ; microros config
-board_microros_transport = serial 
+board_microros_transport = serial
 board_microros_distro = humble
 
 ; libraries
-lib_deps = 
+lib_deps =
     rover_lib=symlink://../lib_rover
     https://github.com/micro-ROS/micro_ros_platformio.git
 
-; Act as #define CONSTANT 
-build_flags = 
+; Act as #define CONSTANT
+build_flags =
     ; When defined, LOG() macro are compiled, otherwise it's skipped for performance
     '-D VERBOSE'
     ; Only shows higher logs levels. Levels are: DEBUG=10, INFO=20, WARN=30, ERROR=40, FATAL=50
@@ -288,7 +288,7 @@ Once the code uploaded inside the micro controller, you need to connect it to th
 ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 ```
 
-The "--dev /dev/*" argument needs to match with the usb id of your ESP32. To know its id, run the following in a terminal:
+The "--dev /dev/\*" argument needs to match with the usb id of your ESP32. To know its id, run the following in a terminal:
 
 ```bash
 ls /dev/tty*
@@ -338,11 +338,11 @@ If you are connected to the ROS network, all print will be sent over to your com
 
 To include custom msgs definitions from the rover_msgs package, follow these steps:
 
-  1. Copy the up to date "rover_msgs" folder from ros2_ws/rover/<rover_msgs> inside the <project-name>/extra_package/ folder.
-  2. delete the .pio folder
-  3. open the "platformio.ini file
-  4. ctrl+s to force a rebuild of the .pio folder
-  5. Wait (it's a long wait)
+1. Copy the up to date "rover_msgs" folder from ros2_ws/rover/<rover_msgs> inside the <project-name>/extra_package/ folder.
+2. delete the .pio folder
+3. open the "platformio.ini file
+4. ctrl+s to force a rebuild of the .pio folder
+5. Wait (it's a long wait)
 
 ### Platformio project folder structure example
 

@@ -8,7 +8,7 @@ Our can network works with a "master/slave" model.
 
 ### The Master
 
-The master is a single ROS Node running on the rover's pc (called the main computer unit or MCU). This node makes a bridge between ROS topics and services and our can network. To start it, you need a USB to CAN interface for your computer like the [canable pro 1.0](https://canable.io/) or any other adapters with the *slcan* firmware ([see can documentation](https://canable.io/getting-started.html)). (If you bought a device no one used before, you'll need to add it to [the automatic connection script](../../rover_can/scripts/can_configuration/90-usb-slcan.rules))
+The master is a single ROS Node running on the rover's pc (called the main computer unit or MCU). This node makes a bridge between ROS topics and services and our can network. To start it, you need a USB to CAN interface for your computer like the [canable pro 1.0](https://canable.io/) or any other adapters with the _slcan_ firmware ([see can documentation](https://canable.io/getting-started.html)). (If you bought a device no one used before, you'll need to add it to [the automatic connection script](../../rover_can/scripts/can_configuration/90-usb-slcan.rules))
 
 Launching the master node:
 
@@ -22,7 +22,7 @@ Slaves node are all other Can devices on the network, they can be motors, sensor
 
 ### Error feedback
 
-The master will ask each registered slave node for their error state when starting. This can be monitored on the ROS topic */rover/can/device_status*. Nodes can also report state on this topic if programed to do so. In the future, from the GUI, you'll be able to ask each devices their state and debug the ones reporting errors or warning.
+The master will ask each registered slave node for their error state when starting. This can be monitored on the ROS topic _/rover/can/device_status_. Nodes can also report state on this topic if programed to do so. In the future, from the GUI, you'll be able to ask each devices their state and debug the ones reporting errors or warning.
 
 When a node falls into an error state (either warning or error), it needs to log into its serial port the source of the error.
 
@@ -37,7 +37,7 @@ The rover uses CAN2.0A. This standard use 11 bits long IDs. They range from 0 to
 #### RoverCanProtocol Syntax
 
 | bytes index | 0x00  | 0x01           | 0x02    | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 |
-|-------------|-------|----------------|---------|------|------|------|------|------|
+| ----------- | ----- | -------------- | ------- | ---- | ---- | ---- | ---- | ---- |
 | field       | msgID | Msg Content Id | data... | ...  | ...  | ...  | ...  | ...  |
 
 #### Ids

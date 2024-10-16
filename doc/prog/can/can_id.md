@@ -10,19 +10,19 @@
     - [ErrorState](#errorstate)
     - [Heartbeat](#heartbeat)
     - [GPS](#gps)
-    - [PROPULSION\_MOTOR\_CMD](#propulsion_motor_cmd)
-    - [PROPULSION\_MOTOR\_STATUS](#propulsion_motor_status)
+    - [PROPULSION_MOTOR_CMD](#propulsion_motor_cmd)
+    - [PROPULSION_MOTOR_STATUS](#propulsion_motor_status)
 
 ## ID ranges
 
-| RANGE | Type                              |
-|-------|-----------------------------------|
-| 0x0** | Reserved for Master               |
-| 0x1** | Propulsion                        |
-| 0x2** | Arm                               |
-| 0x3** | Science                           |
-| 0x4** | Accessory (lights, speakers, etc) |
-| 0x5** | Free Space                        |
+| RANGE   | Type                              |
+| ------- | --------------------------------- |
+| 0x0\*\* | Reserved for Master               |
+| 0x1\*\* | Propulsion                        |
+| 0x2\*\* | Arm                               |
+| 0x3\*\* | Science                           |
+| 0x4\*\* | Accessory (lights, speakers, etc) |
+| 0x5\*\* | Free Space                        |
 
 ## Device and message ID list
 
@@ -39,7 +39,7 @@
 Devices are organized into a specific order in relation to arbitration.
 
 | ID        | Devices                           |
-|-----------|-----------------------------------|
+| --------- | --------------------------------- |
 |           |                                   |
 | **0x000** | RESERVED FOR MASTER               |
 | 0x020     | - Master Computer unit            |
@@ -85,7 +85,7 @@ Devices are organized into a specific order in relation to arbitration.
 Msgs Ids aren't organised as their order don't matter in the arbitration, just add new messages types at the end of the list.
 
 | ID   | Msgs                    |
-|------|-------------------------|
+| ---- | ----------------------- |
 | 0x00 | NOT_USED                |
 | 0x01 | ERROR_STATE             |
 | 0x02 | HEARTBEAT (msg)         |
@@ -105,7 +105,7 @@ In the following section are defined all the message content internal IDs, remem
 ### ErrorState
 
 | ID   | Device or Message | TYPE |
-|------|-------------------|------|
+| ---- | ----------------- | ---- |
 | 0x00 | NOT_USED          | n/a  |
 | 0x01 | ERROR             | bool |
 | 0x02 | WARNING           | bool |
@@ -113,23 +113,23 @@ In the following section are defined all the message content internal IDs, remem
 ### Heartbeat
 
 | ID   | Device or Message | TYPE |
-|------|-------------------|------|
+| ---- | ----------------- | ---- |
 | 0x00 | NOT_USED          |      |
 | 0x01 | DONT_USE          | bool |
 
 ### GPS
 
-| ID   | Device or Message | TYPE   |
-|------|-------------------|--------|
-| 0x00 | NOT_USED          |        |
-| 0x01 | LATITUDE          |float32 |
-| 0x02 | LONGITUDE         |float32 | 
-| 0x03 | FIX               | uint8  |
+| ID   | Device or Message | TYPE    |
+| ---- | ----------------- | ------- |
+| 0x00 | NOT_USED          |         |
+| 0x01 | LATITUDE          | float32 |
+| 0x02 | LONGITUDE         | float32 |
+| 0x03 | FIX               | uint8   |
 
 ### PROPULSION_MOTOR_CMD
 
 | ID   | Device or Message | TYPE    |
-|------|-------------------|---------|
+| ---- | ----------------- | ------- |
 | 0x00 | NOT_USED          |         |
 | 0x01 | ENABLE            | bool    |
 | 0x02 | TARGET_SPEED      | float32 |
@@ -138,44 +138,44 @@ In the following section are defined all the message content internal IDs, remem
 ### PROPULSION_MOTOR_STATUS
 
 | ID   | Device or Message | TYPE    |
-|------|-------------------|---------|
+| ---- | ----------------- | ------- |
 | 0x00 | NOT_USED          |         |
 | 0x01 | CURRENT_SPEED     | float32 |
 
 ### CAM_CONTROL
 
 | ID   | Device or Message | TYPE |
-|------|-------------------|------|
+| ---- | ----------------- | ---- |
 | 0x00 | NOT_USED          |      |
 | 0x01 | ENABLE            | bool |
 
 ### CAM_CONTROL_A2
 
-| ID   | Device or Message | TYPE   |
-|------|-------------------|------  |
-| 0x00 | NOT_USED          |        |
-| 0x01 | ENABLE            | bool   |
-| 0x02 | POS_YAW           |float32 |
-| 0x03 | POS_TILT          |float32 |
+| ID   | Device or Message | TYPE    |
+| ---- | ----------------- | ------- |
+| 0x00 | NOT_USED          |         |
+| 0x01 | ENABLE            | bool    |
+| 0x02 | POS_YAW           | float32 |
+| 0x03 | POS_TILT          | float32 |
 
 ### LIGHT_CONTROL
 
 | ID   | Device or Message | TYPE |
-|------|-------------------|------|
+| ---- | ----------------- | ---- |
 | 0x00 | NOT_USED          |      |
 | 0x01 | ENABLE            | bool |
 
 ### SCIENCE
 
 | ID   | Device or Message | TYPE |
-|------|-------------------|------|
+| ---- | ----------------- | ---- |
 | 0x00 | NOT_USED          |      |
 | TODO | TODO              |      |
 
 ### COMPASS
 
-| ID   | Device or Message | TYPE   |
-|------|-------------------|--------|
-| 0x00 | NOT_USED          |        |
-| 0x01 | HEADING           |float32 |
-| 0x02 | PITCH             |float32 |
+| ID   | Device or Message | TYPE    |
+| ---- | ----------------- | ------- |
+| 0x00 | NOT_USED          |         |
+| 0x01 | HEADING           | float32 |
+| 0x02 | PITCH             | float32 |

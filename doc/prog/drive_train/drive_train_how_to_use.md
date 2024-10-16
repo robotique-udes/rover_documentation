@@ -7,6 +7,7 @@
     - [Drive Train](#drive-train)
 
 ## Boot and Control Nodes
+
 ### Launch files
 
 In order to properly function, the user has to run the following commands to launch the necessary packages.
@@ -30,7 +31,7 @@ If the gui is down or you do not have access, call the following arbitrations in
 
    ```Bash
    #controller_type
-   CONTROLLER_MAIN = 0 
+   CONTROLLER_MAIN = 0
    CONTROLLER_SECONDARY = 1
 
    #destination
@@ -44,19 +45,22 @@ If the gui is down or you do not have access, call the following arbitrations in
 
    ```Bash
    #Drive train arbitration destination
-   NONE = 0 
+   NONE = 0
    TELEOP = 1
    AUTONOMOUS = 2
    ```
 
 ### Drive Train
-Controls
- - Deadman Switch -> L1
- - Linear Input -> LEFT ANALOG (FRONT)
- - Angular Input -> LEFT ANALOG (SIDE)
- - Mode Tank -> RIGHT ANALOG (SIDE) *Has priority over regular turning mode*
 
- Speed Modes
+Controls
+
+- Deadman Switch -> L1
+- Linear Input -> LEFT ANALOG (FRONT)
+- Angular Input -> LEFT ANALOG (SIDE)
+- Mode Tank -> RIGHT ANALOG (SIDE) _Has priority over regular turning mode_
+
+Speed Modes
+
 - Normal speed(25%) -> R1
 - Turbo Speed(100%) -> R1 + R2
-*Crawler speed(1%) is the default speed
+  \*Crawler speed(1%) is the default speed

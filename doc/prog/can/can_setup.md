@@ -8,9 +8,9 @@
 
 ## Udev Rules
 
-To automatically setup the USB to CAN adapters the rover is using each time they are connected to your PC, follow these steps*:
+To automatically setup the USB to CAN adapters the rover is using each time they are connected to your PC, follow these steps\*:
 
-*A simple Udev rules won't init our canable pro 1.0 adapter so we have to create a service.
+\*A simple Udev rules won't init our canable pro 1.0 adapter so we have to create a service.
 
 1. Navigates to the /can_configuration folder inside of the rover_can/script package.
 
@@ -96,5 +96,5 @@ cansend is a terminal tool to send message over the can network for testing purp
 Usage:
 
 ```bash
-cansend canRovus 001#2345678910ABCDEF #cansend <canNetworkName> <canId>#<canData (max 8 bytes)> 
+cansend canRovus 001#2345678910ABCDEF #cansend <canNetworkName> <canId>#<canData (max 8 bytes)>
 ```

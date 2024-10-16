@@ -8,18 +8,23 @@ style: |
     gap: 1rem;
   }
 ---
+
 # <!--fit--> Introduction aux classes (cpp)
 
 ---
+
 # <!--fit--> Retour sur les connaissances de base:
+
 <style scoped>section { font-size: 30px; }</style>
 
-## Types principaux: 
+## Types principaux:
+
 ```cpp
 void, unsigned int, int, float, double, char
 ```
 
-## Types de bases des "int": 
+## Types de bases des "int":
+
 <div class="columns">
 <div>
 
@@ -28,6 +33,7 @@ uint8_t  [0, 255]
 uint16_t [0, 65535]
 uint32_t [0, 4294967295]
 ```
+
 </div>
 <div>
 
@@ -36,13 +42,17 @@ int8_t  [-128, 127]
 int16_t [-32768, 32767]
 int32_t [-2147483648, 214748367]
 ```
+
 </div>
 
 ---
+
 # <!--fit--> Retour sur les connaissances de base:
+
 <style scoped>section { font-size: 28px; }</style>
 
 ## Variables
+
 ```cpp
 int counter = 1;
 float angle = 45.92f
@@ -50,22 +60,26 @@ int tableau[3] = {0, 1, 2};
 ```
 
 ## Functions
+
 ```cpp
 int add(int a, int b);
 
 [...]
 
 int add(int a, int b)
-{ 
-    return a + b; 
+{
+    return a + b;
 }
 ```
 
 ---
+
 # <!--fit--> Retour sur les connaissances de base:
+
 <!-- <style scoped>section { font-size: 28px; }</style> -->
 
 ## Le scope
+
 ```cpp
 int main(void)
 {
@@ -83,18 +97,26 @@ int main(void)
 ```
 
 ---
+
 # Définition d'une classe:
+
 <style scoped>section { font-size: 40px; }</style>
-Un **type** personnalisé constitué de plusieurs variables et fonctions dans le but de simplifié le code pour l'humain 
+
+Un **type** personnalisé constitué de plusieurs variables et fonctions dans le but de simplifié le code pour l'humain
 
 ---
+
 # Éléments d'une classe:
+
 <style scoped>section { font-size: 40px; }</style>
+
 - Membres (variables)
 - Méthodes (functions)
 
 ---
+
 # Exemple:
+
 <style scoped>section { font-size: 35px; }</style>
 
 ```cpp
@@ -112,8 +134,11 @@ public:
     }
 };
 ```
+
 ---
+
 # Exemple:
+
 <style scoped>section { font-size: 35px; }</style>
 
 ```cpp
@@ -124,8 +149,11 @@ public:
     ~Moteur(){}
 };
 ```
+
 ---
+
 <!-- <style scoped>section { font-size: 30px; }</style> -->
+
 # Exemple:
 
 <div class="columns">
@@ -158,8 +186,9 @@ int main(void)
     printf("%i \n", m1.mode);
 }
 ```
+
 ```cpp
-Output: 
+Output:
     1
     25
 ```
@@ -168,8 +197,11 @@ Output:
 </div>
 
 ---
+
 <style scoped>section { font-size: 30px; }</style>
+
 # Exemple:
+
 <div class="columns">
 <div>
 
@@ -188,6 +220,7 @@ public:
     float getSpeed();
 };
 ```
+
 <!-- float Moteur::getSpeed()
 {
     unsigned long dt = getTime() - lastTime;
@@ -209,22 +242,28 @@ int main(void)
 ```cpp
 Output: 10.0
 ```
+
 </div>
 </div>
 
 ---
+
 # private:
+
 - Les éléments sont seulements disponibles dans les méthodes de la classe
 - Les éléments sont toujours privés si non-spécifié
 - Les membres sont généralement tous privés par convention
 
 # protected:
-- Les éléments sont accessible seulement dans la class ou par ses enfants*
+
+- Les éléments sont accessible seulement dans la class ou par ses enfants\*
 
 # public:
+
 - Les éléments sont disponible en dehors de la classe
 
 ---
+
 <style scoped>section { font-size: 30px; }</style>
 <div class="columns">
 <div>
@@ -268,10 +307,12 @@ int main(void)
 Erreur de compilation:
 "m1.position is inaccessible"
 ```
+
 </div>
 </div>
 
 ---
+
 <style scoped>section { font-size: 30px; }</style>
 <div class="columns">
 <div>
@@ -314,19 +355,24 @@ int main(void)
 ```cpp
 Output: 10.00
 ```
+
 </div>
 </div>
 
 ---
+
 # Opérateur "::" (Namespace)
 
-Ex: 
+Ex:
+
 ```cpp
 float Moteur::getSpeed()
 ```
 
 ---
+
 # Namespaces
+
 <div class="columns">
 <div>
 
@@ -361,7 +407,7 @@ int main(void)
 ```
 
 <!-- ```cpp
-Output: 
+Output:
     3
 
     arg1: 1, arg2: 2
@@ -372,7 +418,9 @@ Output:
 </div>
 
 ---
+
 # Namespaces
+
 <div class="columns">
 <div>
 
@@ -407,7 +455,7 @@ int main(void)
 ```
 
 ```cpp
-Output: 
+Output:
     3
 
     arg1: 1, arg2: 2
@@ -418,6 +466,7 @@ Output:
 </div>
 
 ---
+
 <style scoped>section { font-size: 30px; }</style>
 <div class="columns">
 <div>
@@ -460,10 +509,12 @@ int main(void)
 ```cpp
 Output: 10.00
 ```
+
 </div>
 </div>
 
 ---
+
 <style scoped>section { font-size: 30px; }</style>
 
 # Une classe dans une classe
@@ -509,5 +560,6 @@ int main(void)
 Output:
     La vache fait meu
 ```
+
 </div>
 </div>

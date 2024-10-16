@@ -4,17 +4,23 @@ If you want to request new features on the GUI, create a new task into the githu
 
 - type of work: Prog GUI FR
 - Priority: same as the task your working on
-- Size: According to your knowledge 
+- Size: According to your knowledge
 - Description:
+
   - Follow this markdown template
+
     ```md
     ### Name:
-    *name of requester*
+
+    _name of requester_
+
     ### Development branch:
-    *repo name*
-    *full branch name*
+
+    _repo name_
+    _full branch name_
 
     ## Explanation:
+
     Add as much detail as possible to help implementation
     ```
 
