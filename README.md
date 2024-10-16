@@ -23,16 +23,19 @@ To write new documentation [follow this guide](doc/TODO).
 # General information
 
 <<<<<<< Updated upstream
+
 # To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
+
 =======
 To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
 
 <<<<<<<
 
 =======
->>>>>>> Stashed changes
 
->>>>>>>
+> > > > > > > Stashed changes
+
+> > > > > > >
 
 ## Useful links
 
