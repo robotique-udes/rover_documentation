@@ -25,6 +25,7 @@ To write new documentation [follow this guide](doc/TODO).
 To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
 
 ## Useful links
+
 - [Setup guide](doc/prog/how_to/intial_setup.md): Guide to get your computer setup for developpement
 - [Rovus Github Project](https://github.com/orgs/robotique-udes/projects/1/views/1): Task management, backlog and test planning
 - [Coding Guidelines](doc/prog/how_to/coding%20guidelines.md): Good practices and styling guide
@@ -57,17 +58,17 @@ The current ROS architecture is located on the _RobotiqueUdeS MSTeams_ -> _Rovus
 All the codebase is regrouped into two distinct repositories:
 
 - [rover](https://github.com/robotique-udes/rover): Contains all the code running on the base station computer or the rover main computer
-<<<<<<< HEAD
+  <<<<<<< HEAD
   - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
+- # [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs
+
+  - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
+
 - [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs
-=======
 
-  - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
+> > > > > > > 63b066e (Added welcome)
 
-- [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs 
-
->>>>>>> 63b066e (Added welcome)
-  - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
+- The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
 
 A folder structure example is in [the setup documentation](doc/prog/how_to/intial_setup.md).
 

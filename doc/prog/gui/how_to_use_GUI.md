@@ -39,7 +39,7 @@ Using **Qt Designer** you can create .ui files which gives a visual feedback of 
   ```bash
   cd ~/ros2_ws/src/rover/rover_gui/ui && ./generate_ui.sh
   ```
-- A UI\_<file_name>.h should have generated inside of _rover/rover_gui/ui/include_
+- A UI\_<file*name>.h should have generated inside of \_rover/rover_gui/ui/include*
 - Include the .h file in your app
   ```cpp
   #include "UI_<file_name>.h"
