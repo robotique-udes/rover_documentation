@@ -120,8 +120,8 @@ pip install opencv-python
 pip install opencv-contrib-python
 ```
 
-- *Install setuptools version 58.2.0 for compatibility reasons ([further details](https://answers.ros.org/question/396439/setuptoolsdeprecationwarning-setuppy-install-is-deprecated-use-build-and-pip-and-other-standards-based-tools/))
-- **Install empy version 3.3.4 because version 4.0 cause problems ([further details](https://robotics.stackexchange.com/questions/105842/what-causes-build-error-cannot-import-name-override-opt-from-em))
+- \*Install setuptools version 58.2.0 for compatibility reasons ([further details](https://answers.ros.org/question/396439/setuptoolsdeprecationwarning-setuppy-install-is-deprecated-use-build-and-pip-and-other-standards-based-tools/))
+- \*\*Install empy version 3.3.4 because version 4.0 cause problems ([further details](https://robotics.stackexchange.com/questions/105842/what-causes-build-error-cannot-import-name-override-opt-from-em))
 
 ## ESP32 and micro controller ROS development
 
