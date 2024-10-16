@@ -58,12 +58,14 @@ The current ROS architecture is located on the _RobotiqueUdeS MSTeams_ -> _Rovus
 All the codebase is regrouped into two distinct repositories:
 
 - [rover](https://github.com/robotique-udes/rover): Contains all the code running on the base station computer or the rover main computer
-<<<<<<< Updated upstream
+  <<<<<<< Updated upstream
   <<<<<<< HEAD
   - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
 - # [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs
-=======
->>>>>>> Stashed changes
+
+  =======
+
+  > > > > > > > Stashed changes
 
   - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
 
@@ -72,10 +74,10 @@ All the codebase is regrouped into two distinct repositories:
 > > > > > > > 63b066e (Added welcome)
 
 <<<<<<< Updated upstream
-- The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
-=======
+
+- # The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
   - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
->>>>>>> Stashed changes
+    > > > > > > > Stashed changes
 
 A folder structure example is in [the setup documentation](doc/prog/how_to/intial_setup.md).
 
