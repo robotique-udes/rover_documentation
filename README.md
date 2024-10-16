@@ -1,7 +1,14 @@
+# Welcome!
+
+Welcome to the rover documentation repo. You'll find all the documentation inside the [doc folder](doc/).
+
+To write new documentation [follow this guide](doc/TODO).
+
 # Table of content
 
+- [Welcome!](#welcome)
 - [Table of content](#table-of-content)
-- [Getting started](#getting-started)
+- [General information](#general-information)
   - [Useful links](#useful-links)
   - [Task tracking and team organisation](#task-tracking-and-team-organisation)
   - [Architecture](#architecture)
@@ -13,16 +20,16 @@
   - [From pip](#from-pip)
   - [ESP32 and micro controller ROS development](#esp32-and-micro-controller-ros-development)
 
-# Getting started
+# General information
 
 To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
 
-### Useful links
-
+## Useful links
+- [Setup guide](doc/prog/how_to/intial_setup.md): Guide to get your computer setup for developpement
 - [Rovus Github Project](https://github.com/orgs/robotique-udes/projects/1/views/1): Task management, backlog and test planning
 - [Coding Guidelines](doc/prog/how_to/coding%20guidelines.md): Good practices and styling guide
 - [Electrical Standard](doc/electrical/electric_standard.md): Like coding guidelines but for electrical elements
-- [Testing for the first time guide TODO](TODO): Guide to start, test and stop the rover safely
+- [Testing for the first time guide](doc/TODO): Guide to start, test and stop the rover safely
 - [Documentation](doc/): Folder with all the documentation
 - [_rover_ repo](https://github.com/robotique-udes/rover): Rover main repo, ROS code/packages and all documentation
 - [_rover_micro_ repo](https://github.com/robotique-udes/rover_micro): Rover's Micro controller project (platformio) repo
@@ -31,36 +38,44 @@ To setup your computer for development, [read this page](doc/prog/how_to/intial_
 - [How to request new feature on the GUI](doc/prog/gui/feature_request.md): Procedure to make request for GUI element necessary for your tasks
 - [ADD MORE!]()
 
-### Task tracking and team organisation
+## Task tracking and team organisation
 
 We now use _github project_ to manage tasks, all members of the github rovus team can now access the project on the [RobotiqueUdeS project tab](https://github.com/orgs/robotique-udes/projects/1/views/1)
 
-### Architecture
+## Architecture
 
 <center>
-    <img src="doc/diagrams/VeryHighLevelSoftwareStructure.drawio.svg" alt="Very high level structure diagram" class="center" style="width:700px;"/>
+  <img src="doc/diagrams/VeryHighLevelSoftwareStructure.drawio.svg" alt="Very high level structure diagram" class="center" style="width:700px;">
 </center>
 
 - **TODO: Bring the ROS architecture from Teams to github**
 
 The current ROS architecture is located on the _RobotiqueUdeS MSTeams_ -> _Rovus-General_ channel -> _architecture_ tab. Refer to it when naming topics/services/nodes/namespaces/etc. and update the diagram if you see mismatch.
 
-### Software development
+## Software development
 
 All the codebase is regrouped into two distinct repositories:
 
 - [rover](https://github.com/robotique-udes/rover): Contains all the code running on the base station computer or the rover main computer
+<<<<<<< HEAD
   - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
 - [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs
+=======
+
+  - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
+
+- [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs 
+
+>>>>>>> 63b066e (Added welcome)
   - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
 
-A folder structure example is in [the setup documentation](doc/prog/master%20computing%20unit/setup.md).
+A folder structure example is in [the setup documentation](doc/prog/how_to/intial_setup.md).
 
 The use of [gitsource](https://sourcegit-scm.github.io/) offers a GUI for git (for windows and linux) which is very convenient for new users. It's used by most of the team members, ask any software team member for a quick tutorial if needed.
 
 For more info about development see the in [detail readme](TODO)
 
-### Electrical development
+## Electrical development
 
 All the electrical projects (mostly PCBs) are located into the shared [PCB](https://github.com/robotique-udes/PCB) repo. Its a shared repo with the other RobotiqueUdeS group and doesn't have any branch protection. As of now, it's only used as a storage and sharing space.
 
@@ -68,7 +83,7 @@ All the electrical projects (mostly PCBs) are located into the shared [PCB](http
 
 Right now, it's still your responsibility to update your dependencies often (needs to be automated). If you get compilation or execution errors while running the most recent release branch it's probably because your dependencies are not installed. We'll try to always use the latest version of dependencies when possible, otherwise specify the version and add an explanation as to why the codebase wasn't updated to support the dependencies latest version.
 
-### Upgrade already installed package:
+## Upgrade already installed package:
 
 After upgrading all packages, you'll want to reinstall all depedencies with a specified version (just run all commands below and it'll be done automatically)
 
@@ -78,7 +93,7 @@ sudo apt upgrade
 pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 ```
 
-### From apt
+## From apt
 
 ```bash
 sudo apt -y update
@@ -103,7 +118,7 @@ sudo apt -y install libssh-dev
 sudo apt -y install sl
 ```
 
-### From pip
+## From pip
 
 ```bash
 pip install setuptools==58.2.0 #*
