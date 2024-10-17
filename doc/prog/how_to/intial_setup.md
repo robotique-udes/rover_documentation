@@ -95,7 +95,7 @@ Now you're ready to clone the repository and actually start coding: [This video\
 
 Lastly, make sure to both clone both the _rover_ and the _rover_micro_ repo.
 
-- The _rover_ repo need to be cloned inside your /src folder inside of your ROS environment. If you followed the tutorials, the path should be  `~/ros2_ws/src`.
+- The _rover_ repo need to be cloned inside your /src folder inside of your ROS environment. If you followed the tutorials, the path should be `~/ros2_ws/src`.
 - The _rover_micro_ repo can be cloned anywhere in your computer other than inside your ROS environment (so anywhere other than `~/ros2_ws/`)
 
 # General advice
