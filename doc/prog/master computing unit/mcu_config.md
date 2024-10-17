@@ -42,8 +42,8 @@ alias rover_start='sudo systemctl start rover_ros_autostart.service'
 
 ## Connecting to eduroam wifi network
 
-Run this command in the terminal and change the values in between the \*\* ** with your connection infos.
-**Warning! Every body with some knowledge of linux can see the value stored in the password\*\*
+Run this command in the terminal and change the values in between the \*\* \*\* with your connection infos.
+\*\*Warning! Every body with some knowledge of linux can see the value stored in the password\*\*
 
 ```bash
 sudo nmcli con add type wifi ifname **NAME_OF_NETWORK_INT** con-name eduroam ssid "eduroam" wifi-sec.key-mgmt wpa-eap 802-1x.eap peap 802-1x.identity "**CIP**@usherbrooke.ca" 802-1x.phase2-auth mschapv2 802-1x.password "**PASSWORD**" 802-1x.ca-cert "" 802-1x.anonymous-identity "" wifi-sec.auth-alg open 802-1x.phase1-peapver 0
@@ -75,17 +75,17 @@ To configure/install the service run the following commands:
    ```ini
    [Unit]
    Description="rover layer"
-
+   
    [Service]
    Environment="HOME=**USERNAME**"
    Environment="ROS_DOMAIN_ID=69"
-
+   
    ExecStart=/home/**USERNAME**/ros2_ws/src/rover/rover_helper/script/auto_start_rover.sh
    Restart=on-failure
-
+   
    [Install]
    WantedBy=multi-user.target
-
+   
    ExecStart=/opt/ros/humble/bin/ros2 launch rover_drive_train drive_train.launch.py
    ExecStart=/opt/ros/humble/bin/ros2 run rover_gui main_gui
    ```
@@ -105,7 +105,6 @@ When debugging it'll probably be nice to disable the service, here's how you can
 ```bash
 sudo systemctl mask rover_ros_autostart.service
 sudo systemctl daemon-reload
-
 ```
 
 ### Enable auto start
