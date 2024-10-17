@@ -1,6 +1,6 @@
 # How to use the rover GUI
 
-The GUI is a Qt6 application. TODO: Explain link to ROS
+The GUI is a Qt6 application. TODO: Create and explain link to ROS
 
 ## Launching the app
 
@@ -22,7 +22,7 @@ In another terminal (only necessary if not connected with the rover (standalone)
 ros2 launch rover_helper rover.launch.py
 ```
 
-If you encounter errors when building make sure to update your [dependencies](../../../README.md#dependencies).
+If you encounter errors when building make sure to update your [dependencies](../../General%20information.md#dependencies).
 
 ## Software development on the roverGUI
 
@@ -37,7 +37,8 @@ Using **Qt Designer** you can create .ui files which gives a visual feedback of 
   - rover/rover_gui/ui/ui
 - Compile the UI (creates a .h from the .ui file)
   ```bash
-  cd ~/ros2_ws/src/rover/rover_gui/ui && ./generate_ui.sh
+  cd ~/ros2_ws/src/rover/rover_gui/ui 
+  ./generate_ui.sh # Can probably be added to the CMakeFile
   ```
 - A UI\_<file*name>.h should have generated inside of \_rover/rover_gui/ui/include*
 - Include the .h file in your app

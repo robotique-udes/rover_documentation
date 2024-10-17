@@ -1,14 +1,8 @@
-# Table of content
-
-- [Table of content](#table-of-content)
-- [Panneau de boutons](#panneau-de-boutons)
-  - [Bill of materials](#bill-of-materials)
-
 # Panneau de boutons
 
 ## Bill of materials
 
-\*\*Toutes les quantiés sont des quantités minimales. Un surplus pourrait être acheté au besoin.
+\*\*Toutes les quantités sont des quantités minimales. Un surplus pourrait être acheté au besoin.
 
 \*\*Les quantités numériques qui sont accompagnées d'un lien où l'article est vendu est paquet de plusieurs, indiquent la quantité de fois d'acheter le paquet.
 
@@ -16,7 +10,7 @@
 
 \*\*S'il y a plus qu'une quantité d'indiqué et que celles-ci sont séparées par un tiret, cela veut dire qu'il faut deux sortes d'un matériel. La première quantité va avec le premier lien et la deuxième quantité pour le deuxième lien.
 
-| Matériel                                                                                                                   | Quantité | Commandé | \*\*\*\* Commentaire                                                                                                                                                                                                                                    |
+| Matériel                                                                                                                   | Quantité | Commandé | Commentaires                                                                                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [XLR femelle](https://www.amazon.ca/XLR-Female-Jack-Pin-Connector/dp/B07S6J8WVD)                                           | 3        | x        | Il n'est pas obligatoire d'acheter ceux dans le lien, c'est juste une exemple, mais ça peut le faire aussi.                                                                                                                                             |
 | [~~Encodeur rotatif~~](https://www.amazon.ca/Taiss-KY-040-Encoder-15%C3%9716-5-Arduino/dp/B07F26CT6B)                      | 5        |          | **Phil: Attention, ceux-ci fonctionne sur le 5V, mais vous achetez seulement un régulateur 3V**                                                                                                                                                         |

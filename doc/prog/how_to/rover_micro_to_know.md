@@ -65,7 +65,7 @@ When buying ESP32 or any microcontrollers, make sure it comes with a unique USB 
 To order: <https://fr.aliexpress.com/item/1005005906529113.html>
 
 Here is an example of a bad FTDI chip (CP2102N):
-![FTDI example](../../img/esp32-ftdi.gif)
+![FTDI example](../../attachements/esp32-ftdi.gif)
 
 ## None MicroRos project (preferred)
 
@@ -235,7 +235,7 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0
 
 This should be the result when no micro-controller are plugged-in:
 
-![result_test_micro_agent.png](../../img/result_test_micro_agent.png)
+![result_test_micro_agent.png](../../attachements/result_test_micro_agent.png)
 
 ### platformio.ini
 

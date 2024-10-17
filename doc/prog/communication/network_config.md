@@ -68,7 +68,7 @@ Web Interface:
   - Enter these settings under addresses:
     _ Address: 192.168.144._ (_ should be between 100 and 255 and be reserved in the [IP address table](#IP-address-table))
     _ Netmask: 255.255.255.0 \* Gateway: Leave empty
-    ![network_config.png](../../img/network_config.png)
+    ![network_config.png](../../attachements/network_config.png)
   - Reset the network interface (set to off than to on)
     - To check if the new config was applied, enter this command in a terminal:
     - `ifconfig | grep <ENTER ADDRESS> `
