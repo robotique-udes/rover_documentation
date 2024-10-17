@@ -11,11 +11,15 @@ jobs:
 
       - name: Check for merge conflict markers
         run: |
+          echo "Checking for Conflict markers in markdown files (.md)..."
+
           conflicts=$(grep -rnH '<<<<<<<\|=======\|>>>>>>>' --include=\*.md . || true)
           if [ -n "$conflicts" ]; then
-            echo "Merge conflict markers found in Markdown files. Please resolve the following conflicts before pushing:"
-            echo "$conflicts"
+            echo "Merge conflict markers found in files. Please remove them:"
+            echo "*************************"
+            echo -e "\033[31m$conflicts\033[0m"
+            echo "*************************"
             exit 1
           else
-            echo "No merge conflict markers found."
+            echo "No marker found! \033[32mPassed\033[0m"
           fi
