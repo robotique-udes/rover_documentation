@@ -1,9 +1,14 @@
 name: Format Markdown
 
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Check for Merge Conflicts"]
+    types:
+      - completed
 
 jobs:
   format-md:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
