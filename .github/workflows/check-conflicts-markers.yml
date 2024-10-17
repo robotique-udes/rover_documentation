@@ -13,11 +13,18 @@ jobs:
         run: |
           echo "Checking for Conflict markers in markdown files (.md)..."
 
-          conflicts=$(grep -rnH '<<<<<<<\|=======\|>>>>>>>' --include=\*.md . || true)
-          if [ -n "$conflicts" ]; then
-            echo "Merge conflict markers were found in files. Please remove them:"
-            echo "*************************\033[31m\n$conflicts\n\033[0m*************************"
+          mapfile -t conflicts < <(grep -rnH '<<<<<<<\|=======\|>>>>>>>' --include=\*.md . || true)
+
+          if [ ${#conflicts[@]} -gt 0 ]; then
+            echo -e "Merge conflict markers found in Markdown files. Please remove them:"
+            for conflict in "${conflicts[@]}"; do
+              # Split the output into file, line number, and text
+              IFS=":" read -r file line_number line_text <<< "$conflict"
+
+              echo -e "\033[31m$file($line_number): $line_text\033[0m"
+              echo ""
+            done
             exit 1
           else
-            echo -e "No marker found! \033[32mPassed\033[0m"
+            echo "No merge conflict markers found."
           fi
