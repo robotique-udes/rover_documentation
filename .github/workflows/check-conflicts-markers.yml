@@ -16,7 +16,7 @@ jobs:
           conflicts=$(grep -rnH '<<<<<<<\|=======\|>>>>>>>' --include=\*.md . || true)
           if [ -n "$conflicts" ]; then
             echo "Merge conflict markers were found in files. Please remove them:"
-            echo -e "*************************\033[31m\n$conflicts\n\033[0m*************************"
+            echo "*************************\033[31m\n$conflicts\n\033[0m*************************"
             exit 1
           else
             echo -e "No marker found! \033[32mPassed\033[0m"
