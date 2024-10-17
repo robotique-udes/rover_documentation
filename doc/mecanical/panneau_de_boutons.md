@@ -32,5 +32,3 @@
 | [Poignée de porte](https://www.amazon.ca/Pack-Entry-Knobs-Outdoor-Interior/dp/B0D7GBKWKW/ref=cs_sr_dp_1?)                  | 1        | x        | Il n'est pas obligatoire d'acheter celle du lien, c'est juste un exemple, mais cela peut convenir également. Cependant, il est important d'acheter une poignée de porte ronde qui se verrouille avec une clé, et que celle-ci soit incluse dans l'achat |
 
 Testing something
-
-/
