@@ -40,6 +40,7 @@ To setup your computer for development, [read this page](doc/prog/how_to/intial_
 We now use _GitHub project_ to manage tasks, all members of the GitHub Rovus team can now access the project on the [RobotiqueUdeS project tab](https://github.com/orgs/robotique-udes/projects/1/views/1)
 
 ## Architecture
+
 ![[attachements/VeryHighLevelSoftwareStructure.drawio.svg]]
 
 - **TODO: Bring the ROS architecture from Teams to GitHub**
