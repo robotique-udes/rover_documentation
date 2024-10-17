@@ -22,20 +22,7 @@ To write new documentation [follow this guide](doc/TODO).
 
 # General information
 
-<<<<<<< Updated upstream
-
-# To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
-
-=======
 To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
-
-<<<<<<<
-
-=======
-
-> > > > > > > Stashed changes
-
-> > > > > > >
 
 ## Useful links
 
@@ -71,8 +58,11 @@ The current ROS architecture is located on the _RobotiqueUdeS MSTeams_ -> _Rovus
 All the codebase is regrouped into two distinct repositories:
 
 - [rover](https://github.com/robotique-udes/rover): Contains all the code running on the base station computer or the rover main computer
+
   - The _rover_ repo is a ROS metapackage and should only be cloned into your ROS workspace (_ros2_ws/src_).
+
 - [rover_micro](https://github.com/robotique-udes/rover_micro): Contains all micro controller projects which runs on our multiple PCBs
+
   - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ros projects in the future.
 
 A folder structure example is in [the setup documentation](doc/prog/how_to/intial_setup.md).
@@ -133,8 +123,8 @@ pip install opencv-python
 pip install opencv-contrib-python
 ```
 
-- \*Install setuptools version 58.2.0 for compatibility reasons ([further details](https://answers.ros.org/question/396439/setuptoolsdeprecationwarning-setuppy-install-is-deprecated-use-build-and-pip-and-other-standards-based-tools/))
-- \*\*Install empy version 3.3.4 because version 4.0 cause problems ([further details](https://robotics.stackexchange.com/questions/105842/what-causes-build-error-cannot-import-name-override-opt-from-em))
+- *Install setuptools version 58.2.0 for compatibility reasons ([further details](https://answers.ros.org/question/396439/setuptoolsdeprecationwarning-setuppy-install-is-deprecated-use-build-and-pip-and-other-standards-based-tools/))
+- **Install empy version 3.3.4 because version 4.0 cause problems ([further details](https://robotics.stackexchange.com/questions/105842/what-causes-build-error-cannot-import-name-override-opt-from-em))
 
 ## ESP32 and micro controller ROS development
 
