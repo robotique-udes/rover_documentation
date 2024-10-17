@@ -16,9 +16,8 @@ jobs:
           mapfile -t conflicts < <(grep -rnH '<<<<<<<\|=======\|>>>>>>>' --include=\*.md . || true)
 
           if [ ${#conflicts[@]} -gt 0 ]; then
-            echo -e "Merge conflict markers found in Markdown files. Please remove them:"
+            echo -e " \033[31m[ERROR]\033[0m Merge conflict markers found in Markdown files. Please remove them:"
             echo "*************************************************************"
-            echo ""
             echo 
             for conflict in "${conflicts[@]}"; do
               # Split the output into file, line number, and text
@@ -30,5 +29,5 @@ jobs:
             echo "*************************************************************"
             exit 1
           else
-            echo "No merge conflict markers found."
+            echo -e "\033[32mNo merge conflict markers found.\033[0m"
           fi
