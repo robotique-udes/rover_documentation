@@ -75,17 +75,17 @@ To configure/install the service run the following commands:
    ```ini
    [Unit]
    Description="rover layer"
-   
+
    [Service]
    Environment="HOME=**USERNAME**"
    Environment="ROS_DOMAIN_ID=69"
-   
+
    ExecStart=/home/**USERNAME**/ros2_ws/src/rover/rover_helper/script/auto_start_rover.sh
    Restart=on-failure
-   
+
    [Install]
    WantedBy=multi-user.target
-   
+
    ExecStart=/opt/ros/humble/bin/ros2 launch rover_drive_train drive_train.launch.py
    ExecStart=/opt/ros/humble/bin/ros2 run rover_gui main_gui
    ```
