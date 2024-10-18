@@ -11,17 +11,25 @@ All the documentation is written in markdown files (.md) for simplicity and port
 1. Clone the rover_documentation repository locally
    1. [Follow this guide to learn how to configure your ssh key and clone a repo](doc/prog/how_to/intial_setup#Git-setup-and-how-to-use)
 2. Install Obsidian (available for windows, linux, MacOS)
-   - **Linux installation**
+	* **Linux installation**
+		```bash
+		mkdir ~/Downloads/tmp
+		cd ~/Downloads/tmp
+		curl -O https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.4/obsidian_1.7.4_amd64.deb
+		sudo apt install ./obsidian_*
+		```
+    * **Windows installation**
+		* [Download from their website](https://obsidian.md/)
+	
+	* **MacOS installation**
+		* [Download from their website](https://obsidian.md/)
 
-```bash
-mkdir ~/Downloads/tmp
-cd ~/Downloads/tmp
-curl -O https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.4/obsidian_1.7.4_amd64.deb
-sudo apt install ./obsidian_*
-```
+3. Launch Obsidian (There should now be an app called "obsidian" in the activities panel)
+4. Select "Open Folder as vault"
+	- Open the *rover_documentation* folder
+5. You should now be able to edit the documentation easily. Once you're done, don't forget to commit and push your changes
 
-2. Launch Obsidian (There should now be an app called "obsidian" in the activities panel)
-3. Select "Open Folder as vault"
-   1. Open the rover_document folder
-
-You're good to go!
+> [!NOTE] Keep in mind
+> Right now, most obsidian settings are stored inside the .obsidian folder. This means that if you change some settings, they'll get shared to everyone.
+> 
+> *This was decided by the team to make it simpler. Mention it if you don't like it*

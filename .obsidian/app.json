@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "trashOption": "system",
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": ".attachments",
+  "livePreview": true
+}
