@@ -4,7 +4,7 @@ Welcome to the rover documentation repo. You'll find all the documentation insid
 
 # How to write new documentation
 
-All the documentation is written in markdown files (.md) for simplicity and portability. You can edit these file in any text editor but markdown editors are nicer. We recommend [obsidian](https://obsidian.md/).
+All the documentation is written in markdown files (.md) for simplicity and portability. You can edit these files in any text editor but markdown editors are nicer. We recommend [obsidian](https://obsidian.md/).
 
 ## Writing documentation with Obsidian
 
@@ -33,3 +33,6 @@ All the documentation is written in markdown files (.md) for simplicity and port
 > Right now, most obsidian settings are stored inside the .obsidian folder. This means that if you change some settings, they'll get shared to everyone.
 >
 > _This was decided by the team to make it simpler. Mention it if you don't like it_
+
+> [!NOTE] Warning
+> Each night at 5 am, an auto-formater parse the whole documentation folder and format all markdown files. Try to always pull before making new modifications to minimise the chances of conflicts

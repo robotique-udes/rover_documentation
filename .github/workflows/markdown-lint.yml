@@ -1,14 +1,11 @@
 name: Format Markdown
 
 on:
-  workflow_run:
-    workflows: ["Check for Merge Conflicts"]
-    types:
-      - completed
+  schedule:
+    - cron: '0 5 * * *'
 
 jobs:
   format-md:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
