@@ -18,8 +18,7 @@ Guidelines are there to help organise and increase readability and maintainabili
 | Type of data            | Styling         | Example            |
 | ----------------------- | --------------- | ------------------ |
 | Argument name           | camelCase\_     | `myArg_ `          |
-| Reference               | rPascalCase\_   | `rMyRef`           |
-| Pointers                | pPascalCase\_   | `pMyPointer`       |
+| Non Const Reference     | rPascalCase\_   | `rMyRef`           |
 | private member variable | \_camelCase     | `_myPrivateMember` |
 | global variable         | g_camelCase     | `g_myInt`          |
 | Struct                  | sPascalCase     | `sMyStruct`        |

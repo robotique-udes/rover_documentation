@@ -22,7 +22,7 @@ In another terminal (only necessary if not connected with the rover (standalone)
 ros2 launch rover_helper rover.launch.py
 ```
 
-If you encounter errors when building make sure to update your [dependencies](../../General%20information.md#dependencies).
+If you encounter errors when building make sure to update your [dependencies](../../../General%20information.md#dependencies).
 
 ## Software development on the roverGUI
 

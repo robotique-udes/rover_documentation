@@ -18,11 +18,11 @@
 
 # General information
 
-To setup your computer for development, [read this page](doc/prog/how_to/intial_setup.md). The rest of the documentation takes for granted that you are all set up.
+To setup your computer for development, [read this page](prog/how_to/Initial%20Setup.md). The rest of the documentation takes for granted that you are all set up.
 
 ## Useful links
 
-- [Setup guide](doc/prog/how_to/intial_setup.md): Guide to get your computer setup for development
+- [Setup guide](prog/how_to/Initial%20Setup.md): Guide to get your computer setup for development
 - [Rovus GitHub Project](https://github.com/orgs/robotique-udes/projects/1/views/1): Task management, backlog and test planning
 - [Coding Guidelines](doc/prog/how_to/coding%20guidelines.md): Good practices and styling guide
 - [Electrical Standard](doc/electrical/electric_standard.md): Like coding guidelines but for electrical elements
@@ -32,7 +32,7 @@ To setup your computer for development, [read this page](doc/prog/how_to/intial_
 - [_rover_micro_ repo](https://github.com/robotique-udes/rover_micro): Rover's Micro controller project (platformio) repo
 - [_PCB_ repo](https://github.com/robotique-udes/PCB): All PCB projects
 - [MS Teams](https://teams.microsoft.com/l/channel/19%3Ae38473dc00d9495599b19b8342af0a4c%40thread.skype/Rovus%20-%20G%C3%A9n%C3%A9ral?groupId=91136b22-e319-4e01-a080-e57a35690eee): Larger files storage and RobotiqueUdeS team management
-- [How to request new feature on the GUI](doc/prog/gui/feature_request.md): Procedure to make request for GUI element necessary for your tasks
+- [How to request new feature on the GUI](prog/systems/gui/feature_request.md): Procedure to make request for GUI element necessary for your tasks
 - [ADD MORE!]()
 
 ## Task tracking and team organisation
@@ -59,7 +59,7 @@ All the code base is regrouped into two distinct repositories:
 
   - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ROS projects in the future.
 
-A folder structure example is in [the setup documentation](doc/prog/how_to/intial_setup.md).
+A folder structure example is in [the setup documentation](prog/how_to/Initial%20Setup.md).
 
 The use of [gitsource](https://sourcegit-scm.github.io/) offers a GUI for git (for windows and linux) which is very convenient for new users. It's used by most of the team members, ask any software team member for a quick tutorial if needed.
 

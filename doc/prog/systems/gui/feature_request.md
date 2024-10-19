@@ -25,4 +25,4 @@ If you want to request new features on the GUI, create a new task into the githu
     ```
 
 Example:
-![FR example](../../attachements/feature_request.png)
+![FR example](../../../attachements/feature_request.png)
