@@ -40,7 +40,7 @@ The following cmd _create_ a cmd to always compile and build ROS into the right 
 alias b='pushd . > /dev/null && cd ~/ros2_ws && colcon build --symlink-install && popd > /dev/null'
 ```
 
-#### Enable ros logging colors
+#### Enable ROS logging colours
 
 ```bash
 export RCUTILS_COLORIZED_OUTPUT=1

@@ -18,11 +18,11 @@
 
 # General information
 
-To setup your computer for development, [read this page](prog/how_to/Setup/1%20Read%20First.md). The rest of the documentation takes for granted that you are all set up.
+To setup your computer for development, [read this page](prog/how_to/Setup/1_read_first.md). The rest of the documentation takes for granted that you are all set up.
 
 ## Useful links
 
-- [Setup guide](prog/how_to/Setup/1%20Read%20First.md): Guide to get your computer setup for development
+- [Setup guide](prog/how_to/Setup/1_read_first.md): Guide to get your computer setup for development
 - [Rovus GitHub Project](https://github.com/orgs/robotique-udes/projects/1/views/1): Task management, backlog and test planning
 - [Coding Guidelines](doc/prog/how_to/coding%20guidelines.md): Good practices and styling guide
 - [Electrical Standard](doc/electrical/electric_standard.md): Like coding guidelines but for electrical elements
@@ -59,7 +59,7 @@ All the code base is regrouped into two distinct repositories:
 
   - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ROS projects in the future.
 
-A folder structure example is in [the setup documentation](prog/how_to/Setup/1%20Read%20First.md).
+A folder structure example is in [the setup documentation](prog/how_to/Setup/1_read_first.md).
 
 The use of [gitsource](https://sourcegit-scm.github.io/) offers a GUI for git (for windows and linux) which is very convenient for new users. It's used by most of the team members, ask any software team member for a quick tutorial if needed.
 
