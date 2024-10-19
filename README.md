@@ -16,8 +16,10 @@ All the documentation is written in markdown files (.md) for simplicity and port
      ```bash
      mkdir ~/Downloads/tmp
      cd ~/Downloads/tmp
-     curl -O https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.4/obsidian_1.7.4_amd64.deb
+     curl -O -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.4/obsidian_1.7.4_amd64.deb
      sudo apt install ./obsidian_*
+     cd ..
+     rm -r tmp
      ```
    - **Windows installation**
      - [Download from their website](https://obsidian.md/)
