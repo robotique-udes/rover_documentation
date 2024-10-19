@@ -45,3 +45,31 @@ alias b='pushd . > /dev/null && cd ~/ros2_ws && colcon build --symlink-install &
 ```bash
 export RCUTILS_COLORIZED_OUTPUT=1
 ```
+
+#### Create function to clean build environment 
+With this function in your .bashrc, you can clean your build environment by writing "clean" in your terminal
+```
+function clean() {
+    # Remove build, install, and log directories
+    rm -rf ~/ros2_ws/build ~/ros2_ws/install ~/ros2_ws/log
+
+    # Source the bashrc to ensure the environment is updated
+    source ~/.bashrc
+
+    # Save the current directory, go to ROS workspace, and rebuild with colcon
+    pushd . > /dev/null
+    cd ~/ros2_ws
+    colcon build --symlink-install
+    popd > /dev/null
+
+    # Source the bashrc again to refresh the environment
+    source ~/.bashrc
+
+    # Repeat the colcon build
+    pushd . > /dev/null
+    cd ~/ros2_ws
+    colcon build --symlink-install
+    popd > /dev/null
+}
+
+```
