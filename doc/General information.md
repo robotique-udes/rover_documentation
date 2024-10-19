@@ -71,55 +71,12 @@ All the electrical projects (mostly PCBs) are located into the shared [PCB](http
 
 # Dependencies
 
-Right now, it's still your responsibility to update your dependencies often (needs to be automated). If you get compilation or execution errors while running the most recent release branch it's probably because your dependencies are not installed. We'll try to always use the latest version of dependencies when possible, otherwise specify the version and add an explanation as to why the codebase wasn't updated to support the dependencies latest version.
-
-## Upgrade already installed package:
-
-After upgrading all packages, you'll want to reinstall all depedencies with a specified version (just run all commands below and it'll be done automatically)
-
+Dependencies can be install by running the following command
 ```bash
-sudo apt update
-sudo apt upgrade
-pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+~/ros2_ws/src/rover/scripts/provision.sh
 ```
 
-## From apt
-
-```bash
-sudo apt -y update
-sudo apt -y install pip
-sudo apt -y install python3-venv
-sudo apt -y install python-is-python3
-sudo apt -y install ros-humble-desktop
-sudo apt -y install ros-humble-ros-base
-sudo apt -y install ros-dev-tools
-sudo apt -y install ros-humble-joy
-sudo apt -y install can-utils
-sudo apt -y install qt6-base-dev
-sudo apt -y install gstreamer1.0-rtsp
-rm -r ~/.cache/gstreamer-1.0/
-sudo apt purge gstreamer1.0-vaapi
-sudo apt -y install gir1.2-gst-rtsp-server-1.0
-sudo apt -y install python3-gi
-sudo apt -y install ros-humble-rviz2
-sudo apt -y install ros-humble-joint-state-publisher
-sudo apt -y install ros-humble-robot-state-publisher
-sudo apt -y install libssh-dev
-sudo apt -y install sl
-```
-
-## From pip
-
-```bash
-pip install setuptools==58.2.0 #*
-pip install empy==3.3.4 #**
-pip install opencv-python
-pip install opencv-contrib-python
-```
-
-- \*Install setuptools version 58.2.0 for compatibility reasons ([further details](https://answers.ros.org/question/396439/setuptoolsdeprecationwarning-setuppy-install-is-deprecated-use-build-and-pip-and-other-standards-based-tools/))
-- \*\*Install empy version 3.3.4 because version 4.0 cause problems ([further details](https://robotics.stackexchange.com/questions/105842/what-causes-build-error-cannot-import-name-override-opt-from-em))
-
-## ESP32 and micro controller ROS development
+After installing new deps, it's always a good idea to clean your build environnement. If you're [bashrc](doc/prog/how_to/Setup/bashrc_file.md) is up-to-date, run the `clean` command in a terminal.
+# ESP32 and micro controller ROS development
 
 See corresponding [repository](https://github.com/robotique-udes/rover_micro)
