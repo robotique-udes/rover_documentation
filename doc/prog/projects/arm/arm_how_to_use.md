@@ -17,7 +17,6 @@ The simulation is set to false by default. Launching rover.launch.py without any
 # Controls
 
 Just like drive_train controls, the arm cannot be controlled if the deadman (L1) is not engaged.
-
 ## Joint Controls
 
 TODO

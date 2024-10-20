@@ -32,7 +32,7 @@ To automatically setup the USB to CAN adapters the rover is using each time they
    sudo udevadm control --reload-rules
    ```
 
-4. Unconnect and reconnect your device to your computer.
+4. Disconnect and reconnect your device to your computer.
 
 5. If everything is setup correctly, you should see a "canRovus" network adapter when your USB-to-CAN adapter is plugged in. You can run the following command to confirm
 
@@ -44,7 +44,7 @@ To automatically setup the USB to CAN adapters the rover is using each time they
 
    ```Bash
    canRovus: flags=193<UP,RUNNING,NOARP>  mtu 16
-        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 1000  (UNSPEC)
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 100  (UNSPEC)
         RX packets ...
    ```
 

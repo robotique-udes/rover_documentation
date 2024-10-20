@@ -4,10 +4,6 @@
 
 \*\*Toutes les quantités sont des quantités minimales. Un surplus pourrait être acheté au besoin.
 
-\*\*Les quantités numériques qui sont accompagnées d'un lien où l'article est vendu est paquet de plusieurs, indiquent la quantité de fois d'acheter le paquet.
-
-\*\*Les quantités spécifiés par "unités" indique la quantité spécifique de l'objet
-
 \*\*S'il y a plus qu'une quantité d'indiqué et que celles-ci sont séparées par un tiret, cela veut dire qu'il faut deux sortes d'un matériel. La première quantité va avec le premier lien et la deuxième quantité pour le deuxième lien.
 
 | Matériel                                                                                                                   | Quantité | Commandé | Commentaires                                                                                                                                                                                                                                            |

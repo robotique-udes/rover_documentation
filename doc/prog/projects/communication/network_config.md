@@ -4,7 +4,7 @@ Here you will find the ip addresses and login info of each antenna as well as al
 
 ## IP address table
 
-The rover is on the 192.168.144.0/24
+The rover is on the 192.168.144.0/24 subnet
 
 Personal computers must be on IP addresses between 192.168.144.100 and 192.168.144.254.
 
@@ -23,7 +23,7 @@ This is a table of all IP addresses used.
 | 192.168.144.101    | Philippe Michaud    |
 | Add your IP here   |                     |
 
-The ROS_DOMAIN_ID must be 69 on all computers :
+The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
 
 ```bash
 export ROS_DOMAIN_ID=69
@@ -72,23 +72,22 @@ Web Interface:
   - Reset the network interface (set to off than to on)
     - To check if the new config was applied, enter this command in a terminal:
     - `ifconfig | grep <ENTER ADDRESS> `
-    - If a line like this: `inet <YOUR IP> netmask:255.255.255.0 ...` apers, your all set.
+    - If a line like this: `inet <YOUR IP> netmask:255.255.255.0 ...` appear, your all set.
 
-- When using USB to Ethernet adapters, you'll need to make the configuration for each different adapters
-- You should now able to ping other devices on the network.
+>[!NOTE]
+When using USB to Ethernet adapters, you'll need to make the configuration for each different adapters
 
 ### Wireless Setup
 
-**Des problèmes ont été observé avec le router lorsque plusieurs messages ROS sont envoyés. L'usage de la connection wireless est flaky.**
+>[!WARNING]
+>Problems have been notices when using a cheap router with ROS sending a lot of small packets very fast (joy msgs). This connection can be buggy and flaky 
 
-Il est possible de se connecter au Rover sans sortir l'antenne de la base station, très pratique pour des tests à courtes portées. Il y a un router en mode lan repeter dans le rover qui émet un réseaux wifi qui permet d'accèder au réseaux local du rover (M2.4, MCU, Cams, etc.)
+Its possible to connect to the rover without the big base station antenna, it's very useful for small range tests. There's a small router configured as wireless LAN access point. When connected to this wifi network, you'll be able to access all the LAN network off the rover (M2.4, MCU, Cams, etc.)
 
-Information de connections:
-
-- Interface de configuration du router
-
+Connection information:
+- Router configuration interface
   - password: rover
 
-- Réseau wifi
+- Wifi network
   - SSID: rovus_low_range
   - password: roverrover

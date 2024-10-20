@@ -1,0 +1,12 @@
+- [Setup guide](prog/how_to/Setup/1_read_first.md): Guide to get your computer setup for development
+- [Rovus GitHub Project](https://github.com/orgs/robotique-udes/projects/1/views/1): Task management, backlog and test planning
+- [Coding Guidelines](doc/prog/how_to/coding%20guidelines.md): Good practices and styling guide
+- [Electrical Standard](doc/electrical/electric_standard.md): Like coding guidelines but for electrical elements
+- [Testing for the first time guide](doc/TODO): Guide to start, test and stop the rover safely
+- [Documentation](doc/): Folder with all the documentation
+- [_rover_ repo](https://github.com/robotique-udes/rover): Rover main repo, ROS code/packages and all documentation
+- [_rover_micro_ repo](https://github.com/robotique-udes/rover_micro): Rover's Micro controller project (platformio) repo
+- [_PCB_ repo](https://github.com/robotique-udes/PCB): All PCB projects
+- [MS Teams](https://teams.microsoft.com/l/channel/19%3Ae38473dc00d9495599b19b8342af0a4c%40thread.skype/Rovus%20-%20G%C3%A9n%C3%A9ral?groupId=91136b22-e319-4e01-a080-e57a35690eee): Larger files storage and RobotiqueUdeS team management
+- [How to request new feature on the GUI](prog/projects/gui/feature_request.md): Procedure to make request for GUI element necessary for your tasks
+- [ADD MORE!]()

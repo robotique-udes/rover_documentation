@@ -7,4 +7,7 @@ This folder will help you setup your computer for development. Follow each secti
 3. [ROS Installation and setup](ROS_setup)
 4. [Git setup and clone repo](git_setup)
 
-Once your done, check the tools setup list in [the tools folder](../Tools)
+Once your done, check the tool list in [the `Tools` folder](../Tools)
+
+>[!WARNING]
+>Please take the time to read **all** the text, otherwise you'll end up skipping important steps.

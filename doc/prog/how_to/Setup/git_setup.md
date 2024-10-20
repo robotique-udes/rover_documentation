@@ -6,7 +6,9 @@ The first thing to setup is your [ssh key\*](https://usherbrooke.sharepoint.com/
 
 Now you're ready to clone the repository and actually start coding: [This video\*](https://usherbrooke.sharepoint.com/:v:/r/sites/Robotique-UdeS/Documents%20partages/Rover%20-%20G%C3%A9n%C3%A9ral/Tutoriel%20nouveaux/Comment%20utiliser%20git%20ish.mkv?csf=1&web=1&e=d0ssRe) explains how you can make a local copy of the code, make modification safely (without breaking anything) and finally merge it to the "release branch".
 
-\*you need to have access to the RobotiqueUdeS MS-Teams to listen to the video, ps: sorry the sound is quite low.
+>[!NOTE]
+You need to have access to the RobotiqueUdeS MS-Teams to listen to the videos.
+ps: The sound is quite low my bad.
 
 Lastly, make sure to both clone both the _rover_ and the _rover_micro_ repo.
 
