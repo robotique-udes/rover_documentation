@@ -39,6 +39,7 @@ The rover uses CAN2.0A. This standard use 11 bits long IDs. They range from 0 to
 | 0x00  | 0x01           | 0x02    | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 |
 | ----- | -------------- | ------- | ---- | ---- | ---- | ---- | ---- |
 | msgID | Msg Content Id | data... | ...  | ...  | ...  | ...  | ...  |
+
 #### Ids
 
 All IDs are defined inside the [can_id.md](can_id.md) file.

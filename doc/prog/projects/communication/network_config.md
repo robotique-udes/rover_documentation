@@ -74,18 +74,20 @@ Web Interface:
     - `ifconfig | grep <ENTER ADDRESS> `
     - If a line like this: `inet <YOUR IP> netmask:255.255.255.0 ...` appear, your all set.
 
->[!NOTE]
-When using USB to Ethernet adapters, you'll need to make the configuration for each different adapters
+> [!NOTE]
+> When using USB to Ethernet adapters, you'll need to make the configuration for each different adapters
 
 ### Wireless Setup
 
->[!WARNING]
->Problems have been notices when using a cheap router with ROS sending a lot of small packets very fast (joy msgs). This connection can be buggy and flaky 
+> [!WARNING]
+> Problems have been notices when using a cheap router with ROS sending a lot of small packets very fast (joy msgs). This connection can be buggy and flaky
 
 Its possible to connect to the rover without the big base station antenna, it's very useful for small range tests. There's a small router configured as wireless LAN access point. When connected to this wifi network, you'll be able to access all the LAN network off the rover (M2.4, MCU, Cams, etc.)
 
 Connection information:
+
 - Router configuration interface
+
   - password: rover
 
 - Wifi network

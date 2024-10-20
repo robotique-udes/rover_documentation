@@ -9,5 +9,5 @@ This folder will help you setup your computer for development. Follow each secti
 
 Once your done, check the tool list in [the `Tools` folder](../Tools)
 
->[!WARNING]
->Please take the time to read **all** the text, otherwise you'll end up skipping important steps.
+> [!WARNING]
+> Please take the time to read **all** the text, otherwise you'll end up skipping important steps.

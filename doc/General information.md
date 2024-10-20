@@ -56,6 +56,7 @@ All the electrical projects (mostly PCBs) are located into the shared [PCB](http
 # Dependencies
 
 Dependencies can be install by running the following command
+
 ```bash
 ~/ros2_ws/src/rover/scripts/provision.sh
 ```

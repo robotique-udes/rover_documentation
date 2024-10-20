@@ -52,6 +52,7 @@ Below is the rovus custom PINOUT that should be respected as much as possible\*:
     - GREEN = Regulated 3.3V
 
 \*If needed, you can overwrite the convention but only if you use RED cables assemblies and p-touched clearly identified at both ends of the wire.
+
 ### Connectors
 
 Follow this table to choose the correct connector
@@ -62,10 +63,12 @@ Follow this table to choose the correct connector
 | 30-60       | XT-60          |
 | 60-90       | XT-90          |
 | 90-120      | EC5            |
+
 For voltages exceeding about 18V please try to use spark proof connectors. They are often identified by a green mark on XT-\* or a red mark on QS8-S.
 
->[!ERROR] VERY IMPORTANT!
->Always choose a wire gauge corresponding to the amount of current your circuit is drawing to meet the CIRC rules. Also make sure your circuit is correctly protected per the rules wording
+> [!ERROR] VERY IMPORTANT!
+> Always choose a wire gauge corresponding to the amount of current your circuit is drawing to meet the CIRC rules. Also make sure your circuit is correctly protected per the rules wording
+
 ## Batteries
 
 To limit mishap, the battery connectors should always correspond to a specific type of battery. To way we limit the change of connecting the wrong voltage into the wrong circuit
@@ -74,4 +77,3 @@ To limit mishap, the battery connectors should always correspond to a specific t
 | ------------------ | -------------- |
 | 4s (12v ~ 16.8v)   | XT-90          |
 | 6s (18.6v ~ 25.2v) | EC5            |
-

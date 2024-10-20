@@ -3,7 +3,9 @@
 TODO
 
 ## Extensions
+
 ### Necessary
+
 - **Python**
 - **C/C++**
 - **C/C++ Extension Pack**
@@ -20,11 +22,12 @@ TODO
 - **Remote - SSH**: Access rover file system inside VSCode
 
 ## Recommended
+
 - **Error Lens**: Better error highlighting
 - **Bracket Pair Color DLW**: Styling
 - **Task Runner**: Add the play button for the debugger
 
-### Styling 
+### Styling
 
 - **vscode-icons**: Adds icon to folders and files in the editor
 - **One Monokaï**: VS Code theme

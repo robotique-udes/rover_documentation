@@ -46,8 +46,10 @@ alias b='pushd . > /dev/null && cd ~/ros2_ws && colcon build --symlink-install &
 export RCUTILS_COLORIZED_OUTPUT=1
 ```
 
-#### Create function to clean build environment 
+#### Create function to clean build environment
+
 With this function in your .bashrc, you can clean your build environment by writing "clean" in your terminal
+
 ```bash
 function clean() {
     # Remove build, install, and log directories
