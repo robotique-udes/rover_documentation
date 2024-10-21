@@ -4,8 +4,8 @@ This folder will help you setup your computer for development. Follow each secti
 
 1. [Ubuntu Installation](ubuntu_setup.md)
 2. [.bashrc file](bashrc_file.md)
-3. [ROS Installation and setup](ROS_setup)
-4. [Git setup and clone repo](git_setup)
+3. [ROS Installation and setup](ROS_setup.md)
+4. [Git setup and clone repo](git_setup.md)
 
 Once your done, check the tool list in [the `Tools` folder](../Tools)
 
