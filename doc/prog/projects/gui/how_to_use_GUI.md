@@ -59,7 +59,7 @@ Using **Qt Designer**, you can create `.ui` files which gives a visual feedback 
    class MyWidget : public QWidget
    {
    public:
-   	MyWidget(QWidget* parent_): QWidget(parent)
+   	MyWidget(QWidget* parent_): QWidget(parent_)
    	{
    		_ui.setupUi(this);
    	}
