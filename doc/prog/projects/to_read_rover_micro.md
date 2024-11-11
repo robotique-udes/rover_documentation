@@ -33,7 +33,7 @@ This repo contains all microcontroller projects of the rovus team. **Warning: th
 - Use ESP32-\* for all microcontrollers projects
 - Develop in VSCode with platformIO
 - Run your serial ports at 115200 baud
-- Limit dynamic allocation and follow embedded coding guidelines as much as you can ([see our coding guidelines](../how_to/coding%20guidelines.md))
+- Limit dynamic allocation and follow embedded coding guidelines as much as you can ([see our coding guidelines](../Coding%20Guidelines.md))
 
 ### Folder structure
 

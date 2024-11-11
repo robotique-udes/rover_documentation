@@ -433,3 +433,119 @@ void myFunc(float *pValue)
   return;
 }
 ```
+
+## Use IN, OUT and INOUT macros in function definitions when passing reference or pointer arguments
+
+Makes it clear to the developer how the passed argument is used in the function
+- **IN**: This argument is taken as an input argument
+	- Don't confuse with the `const`  keyword, it's value might still change, but it's new value should be considered irrelevant to the caller.
+	- Very often should be paired with the `const` keyword.
+	
+- **OUT**: This argument will be used to return a value, it's initial value mustn't impact the function flow.
+- **INOUT**: This argument initial value is important to the function and this argument will be used to return a value.
+
+### do:
+
+```cpp
+void myFunc(IN std::string arg1_, INOUT std::string arg2_, OUT std::string arg3_)
+{
+  if (arg1_ == someString)
+  {
+	  arg3_ = "Some string";
+  }
+  
+  if (arg2_ == someOtherString)
+  {
+	  arg2_ = "Some other string";
+  }
+
+  return;
+}
+```
+
+### avoid:
+
+```cpp
+void myFunc(std::string arg1_, std::string arg2_, std::string arg3_)
+{
+  if (arg1_ == someString)
+  {
+	  arg3_ = "Some string";
+  }
+  
+  if (arg2_ == someOtherString)
+  {
+	  arg2_ = "Some other string";
+  }
+
+  return;
+}
+```
+
+## Prefer using only one exit point in functions
+
+It's a required by many critical code safety standards and by the coding guideline of multiple projects. For this reason we encourage it's uses. There's multiple schools of thinking when it comes to answering the question of *is it easier to read?* and we do not believe it's always easier to read, this is why we allow using multiple return statement if they are done before the code as had any side-effect. This rule also applies to the `break` and `continue` keywords.
+
+#### Do:
+
+```cpp
+bool myFunc(int* pArg)
+{
+  bool success = true;
+  if (pArg)
+  {
+	  success = false;
+  }
+
+  if (success)
+  {
+	  [...] // actual code
+  }
+
+  return success;
+}
+```
+
+or
+
+```cpp
+bool myFunc(int* pArg)
+{
+  if (pArg)
+  {
+	  return false;
+  }
+
+  [...] // actual code
+
+  return true;
+}
+```
+
+### avoid:
+
+```cpp
+bool myFunc(int* pArg)
+{
+  if (pArg)
+  {
+	  return false;
+  }
+
+  for ([...])
+  {
+	  if ([...])
+	  {
+		  break;
+	  }
+	  else if ([...])
+	  {
+		  return false;
+	  }
+
+	  [...]
+  }
+
+  return true;
+}
+```
