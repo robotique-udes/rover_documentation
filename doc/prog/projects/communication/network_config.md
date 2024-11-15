@@ -21,6 +21,7 @@ This is a table of all IP addresses used.
 |                    |                     |
 | **Personal PC IP** | **Name**            |
 | 192.168.144.101    | Philippe Michaud    |
+| 192.168.144.102    | Anibal Arango       |
 | Add your IP here   |                     |
 
 The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
