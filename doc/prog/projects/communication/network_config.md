@@ -13,11 +13,8 @@ This is a table of all IP addresses used.
 | IP address         | Device              |
 | ------------------ | ------------------- |
 | 192.168.144.20     | Main Rover PC (MCU) |
-| 192.168.144.25     | Camera R1M 1        |
-| 192.168.144.26     | Camera R1M 2        |
-| 192.168.144.50     | M2.4 Rover          |
-| 192.168.144.55     | M2.4 Base station   |
-| 192.168.144.60     | ESP32 antenna PCB   |
+| 192.168.144.25     | Camera Main         |
+| 192.168.144.26     | TO DO               |  
 |                    |                     |
 | **Personal PC IP** | **Name**            |
 | 192.168.144.101    | Philippe Michaud    |
