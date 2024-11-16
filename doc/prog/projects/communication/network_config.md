@@ -14,7 +14,7 @@ This is a table of all IP addresses used.
 | ------------------ | ------------------- |
 | 192.168.144.20     | Main Rover PC (MCU) |
 | 192.168.144.25     | Camera Main         |
-| 192.168.144.26     | TO DO               |  
+| 192.168.144.26     | TO DO               |
 |                    |                     |
 | **Personal PC IP** | **Name**            |
 | 192.168.144.101    | Philippe Michaud    |
