@@ -14,11 +14,11 @@ In order to properly function, the user has to run the following commands to lau
 
 1. Launch the rover.launch.py file if your testing without the rover. (With the rover, this step is not necessary because this launch file start automatically on the rover main computer)
    ```Bash
-   ros2 launch rover_helper rover.launch.py
+   ros2 launch rover_msgs rover.launch.py
    ```
 2. Launch the base helper package which launches all base rover nodes
    ```Bash
-   ros2 launch rover_helper base.launch.py
+   ros2 launch rover_msgs base.launch.py
    ```
 
 ### Arbitration

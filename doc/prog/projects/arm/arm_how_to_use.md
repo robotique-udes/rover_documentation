@@ -2,14 +2,14 @@
 
 This file needs a big overhaul. Outdated information was removed and this is why there's a lot of holes but don't expect all remaining information to be accurate
 
-## Run simulation with rover_helper
+## Run simulation with rover_msgs
 
-### Run the following command to start rviz with rover_helper nodes
+### Run the following command to start rviz with rover_msgs nodes
 
 **As of right now**, arm simulation is in an unstable state and needs to be reworked.
 
 ```Bash
-ros2 launch rover_helper rover.launch.py simulate_arm:=true
+ros2 launch rover_msgs rover.launch.py simulate_arm:=true
 ```
 
 The simulation is set to false by default. Launching rover.launch.py without any arguments will launch all nodes except simulation.
