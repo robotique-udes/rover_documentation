@@ -21,7 +21,7 @@ This is a table of all IP addresses used.
 | 192.168.144.101    | Philippe Michaud    |
 | 192.168.144.102    | Anibal Arango       |
 | 192.168.144.103    | Charles-Éloi Lafond |
-| Add your IP here   |                     |
+| 192.168.144.104    | Marc-Antoine Lépine |
 
 The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
 
