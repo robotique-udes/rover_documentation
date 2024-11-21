@@ -43,8 +43,8 @@ The user and password for all antennas is _rovus_.
 
 Web Interface:
 
-- Username: rovus
-- Password: rovus
+- Username: rover
+- Password: rover
 
 ### Rocket M900 (old, but relevant if needed)
 
