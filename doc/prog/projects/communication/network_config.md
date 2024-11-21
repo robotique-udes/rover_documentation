@@ -14,11 +14,13 @@ This is a table of all IP addresses used.
 | ------------------ | ------------------- |
 | 192.168.144.20     | Main Rover PC (MCU) |
 | 192.168.144.25     | Camera Main         |
-| 192.168.144.26     | TO DO               |
+| 192.168.144.26     | Camera Antenne      |
+| 192.168.144.27     | TO DO               |
 |                    |                     |
 | **Personal PC IP** | **Name**            |
 | 192.168.144.101    | Philippe Michaud    |
 | 192.168.144.102    | Anibal Arango       |
+| 192.168.144.103    | Charles-Éloi Lafond |
 | Add your IP here   |                     |
 
 The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
