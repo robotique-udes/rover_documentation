@@ -22,12 +22,14 @@ Below is the rovus custom PINOUT that should be respected as much as possible\*:
     - 8 -> Same as pin 6 (GND)
 
 \*If needed, you can overwrite the convention but only if you use RED ethernet cables with the custom pinout p-touched and clearly identified at both ends of the wire.
+
 #### Color Code
 
     - RED = Unregulated 24V
     - YELLOW = 12V
     - BLUE = 5V
     - BLACK/GREY = Regular Ethernet
+
 ## High Current connectors and wire (> 4A)
 
 #### Color Code
@@ -37,6 +39,7 @@ Below is the rovus custom PINOUT that should be respected as much as possible\*:
     - BLUE = Regulated 5V
 
 \*If needed, you can overwrite the convention but only if you use ORANGE cables assemblies and p-touched clearly identified at both ends of the wire.
+
 ### Connectors
 
 Follow this table to choose the correct connector
