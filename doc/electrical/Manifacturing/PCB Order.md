@@ -5,3 +5,4 @@
 ## Generate a BOM file from KiCad
 1. In the KiCad PCB Editor, go to File >> Fabrication Outputs >> Component Placement (.pos, .gbr)... Select The format CSV, mm and Single file for board. Then click on Generate Position File.
 2. Open the generated file with Excel or OpenOffice and modify all the columns name to match what JLCPCB wants. Designator, Mid X, Mid Y, Layer, Rotation. THE COLUMN ORDER IS VERY IMPORTANT. You can remove all other column as they are not used by JLCPCB
+3. Export the file in XLS format for JCLPCB
