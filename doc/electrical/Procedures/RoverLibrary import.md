@@ -15,6 +15,7 @@
 4. In the library path, add the full path to the "RoverFootprint.pretty" (should be found in PCB/rover/RoverLib/RoverFootprint.pretty)
 
 ## Testing the library
+
 1. Open a new project
 2. Open the schematic editor
 3. Type "A" or click on the "Add component" in the right tool bar
