@@ -5,7 +5,7 @@
 3. Go into Preferences >> Manage Symbol Libraries...
 4. Add a new line at the end of the list
 5. In the Nickname, type "RoverLibrary"
-6. In the library path, add the full path to the "RoverLibrary.kicad_sym" (should be found in PCB/rover/RoverLib/RoverLibrary.kicad_sym)
+6. In the library path, add the full path to the "0_RoverLibrary.kicad_sym" (should be found in PCB/rover/RoverLib/0_RoverLibrary.kicad_sym)
 
 ## Import Footprint Library
 
