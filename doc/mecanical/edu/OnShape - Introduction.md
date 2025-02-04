@@ -17,12 +17,21 @@ Un assemblage représente la version asemblée de quelques pièces, un sous-syst
 - Mettre des relations avancées (engrenage, crémaillères, tangent, etc) suelement si c'est pas pour l'esthétisme (checker les interférences genre)
 
 Connecteur de position: triad, représente les 3 axes et les 3 rotations
+
 Contraintes
+
 Fixe: Bloque tous les degrés de liberté des deux connecteurs de position. Utilisé si 2 pièces sont fixées en place par des vis ou wtv
+
 Révolution: Permet seulement la rotation en Z (bleu) entre 2 connecteurs de position.
+
 Glissière: Permet seulement la translation en Z (bleu) entre 2 connecteurs de position
+
 Planaire: Permet le mouvement en 2D sur une face (rotation en Z et translation en X et Y)
+
 Cyclindrique: Permet la rotation et la translation en Z seulement
+
 Rainure: Permet la translation en X et la rotation en Z (permet un déplacement dans une rainure)
+
 Rotule: Permet toutes les rotations, mais aucune translation
+
 Parallèle: Garde 2 plans parallèle, mais peut translater dans toutes les direction en plus de la rotation en Z
