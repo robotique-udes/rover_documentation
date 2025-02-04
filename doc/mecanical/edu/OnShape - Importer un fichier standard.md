@@ -1,7 +1,9 @@
 ![Onshape_homepage](../../attachements/Mechanical/Onshape_homepage.png)
 
 ### Importation de fichiers standards
+
 Si vous importez des pièces standards dans vos designs, suivre ces étapes:
+
 1. Downloader la pièce en format .step (step 214 préférablement)
 2. Aller dans le dossier "Pieces Standard" puis dans la catégorie voulue, suivant ces règles:
 	1. 1 document par pièce ou assemblage de pièces
@@ -17,7 +19,5 @@ Si vous importez des pièces standards dans vos designs, suivre ces étapes:
 	4. Ajouter le site d'achat ou une brève description dans la description du document ![Onshape_add_description](../../attachements/Mechanical/Onshape_add_description.png)
 	   
 4. Pour importer une pièce standard dans un autre Atelier de pièce ou assemblage:
-	1. Atelier de pièce; faire la fonction "Dérivée" et choisir la pièce voulue. Pour la positionner à la bonne place, utiliser la fonction "Transformer" en utilisant les connecteurs de position ou des mouvements linéaires
-	2. Assemblage; Insérer puis choisir "Autres documents" et trouver la pièce désirée.
-
-
+   1. Atelier de pièce; faire la fonction "Dérivée" et choisir la pièce voulue. Pour la positionner à la bonne place, utiliser la fonction "Transformer" en utilisant les connecteurs de position ou des mouvements linéaires
+   2. Assemblage; Insérer puis choisir "Autres documents" et trouver la pièce désirée.
