@@ -1,18 +1,22 @@
+## IMPORTANT: Repeat procedure for every projects
 ## Import Symbole Library
-
 1. Pull the latest main branch from github
 2. Open a KiCad project
 3. Go into Preferences >> Manage Symbol Libraries...
-4. Add a new line at the end of the list
-5. In the Nickname, type "RoverLibrary"
-6. In the library path, add the full path to the "RoverLibrary.kicad_sym" (should be found in PCB/rover/RoverLib/RoverLibrary.kicad_sym)
+4.  Instead of the "Global Libraries" tab, go in to the "Project Specific Libraries" tab
+5. Add a new line at the end of the list
+6. In the Nickname, type "RoverLibrary"
+7. In the library path, add the relative path to the "RoverLibrary.kicad_sym" using the "${KIPRJMOD}" path substitution (should look like ${KIPRJMOD}/../../RoverLib/RoverLibrary.kicad_sym)
+8. The "/../" specify the higher hierarchy directory
 
 ## Import Footprint Library
 
 1. Go into Preferences >> Manage Footprint Libraries...
-2. Add a new line at the end of the list
-3. In the Nickname, type "RoverFootprint"
-4. In the library path, add the full path to the "RoverFootprint.pretty" (should be found in PCB/rover/RoverLib/RoverFootprint.pretty)
+2. Instead of the "Global Libraries" tab, go in to the "Project Specific Libraries" tab
+3. Add a new line at the end of the list
+4. In the Nickname, type "RoverFootprint"
+5. In the library path, add the relative path to the "RoverFootprint.pretty" (should be found in PCB/rover/RoverLib/RoverFootprint.pretty) Should look like "${KIPRJMOD}/../../RoverLib/RoverFootprint.pretty"
+6. The "/../" specify the higher hierarchy directory
 
 ## Testing the library
 
