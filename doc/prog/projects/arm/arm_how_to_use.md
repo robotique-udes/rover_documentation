@@ -3,7 +3,9 @@
 This file needs a big overhaul. Outdated information was removed and this is why there's a lot of holes but don't expect all remaining information to be accurate
 
 ## Assign arm arbitration
+
 Run the following commands to be able to teleoperate the arm
+
 ```Bash
 ros2 launch rover_msgs rover.launch.py
 
@@ -11,7 +13,9 @@ ros2 launch rover_msgs base.launch.py
 
 ros2 service call /joy/demux_control rover_msgs/srv/JoyDemuxSetState "{controller_type: 0, destination: 1, force: true}"
 ```
+
 This will launch all necessary nodes as well as set the necessary arbitration while waiting for a functioning UI
+
 ## Run simulation with rover_msgs
 
 ### Run the following command to start rviz with rover_msgs nodes
