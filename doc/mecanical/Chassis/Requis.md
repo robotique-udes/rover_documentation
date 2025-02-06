@@ -1,0 +1,12 @@
+-Léger 
+	-Bâtons de hockey
+	- Coins en PLA
+		- Coin complet en PLA
+		- Coin avec bâton de hockey PLA? ABS?, Nylon? Tests d'infills, température, walls, etc
+-Pas de trou
+	- Pressfit les bâtons dans les coins, set screw vers l'extérieur pour les tenir en place
+-Glissières pour mettre les plaques d'acrylique entre les bâtons
+-Trouver remplacement de la plaque d'ABS
+	-ABS 1020 KG/m3
+	-
+	
