@@ -6,5 +6,5 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": ".attachments",
   "livePreview": true,
-  "defaultViewMode": "preview"
+  "useMarkdownLinks": true
 }
