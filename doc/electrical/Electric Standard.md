@@ -53,12 +53,12 @@ Follow this table to choose the correct connector
 
 For voltages exceeding about 18V please try to use spark proof connectors. They are often identified by a green mark on XT-\* or a red mark on QS8-S.
 
+
 > [!ERROR] VERY IMPORTANT!
 > Always choose a wire gauge corresponding to the amount of current your circuit is drawing to meet the CIRC rules. Also make sure your circuit is correctly protected per the rules wording
-
 ## Batteries
 
-To limit mishap, the battery connectors should always correspond to a specific type of battery. To way we limit the change of connecting the wrong voltage into the wrong circuit
+To limit mishaps, the battery connectors should always correspond to a specific type of battery. This way we limit the chances of connecting the wrong voltage into the wrong circuit.
 
 | Voltage            | Connector Type |
 | ------------------ | -------------- |

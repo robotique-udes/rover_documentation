@@ -1,21 +1,34 @@
-## Project Structure
 
-A project structure should look like this:
--- Project_Name
--- latest
--- Project_Name.kicad_pro
--- Project_Name.kicad_sch
--- Project_Name.kicad_pcb
--- 2025-02-05-REV0
--- Project_Name.step
--- Project_Name.pdf
--- FAB.zip
--- latest-BAK.zip
--- 2025-02-10-REV1
--- Project_Name.step
--- Project_Name.pdf
--- FAB.zip
--- latest-BAK.zip
+
+# Conventions
+- Project name should be *CapitalCamelCase*
+- You should only work in the *latest* folder.
+	- All `REV<Nb>-<Date>` folder should be screenshots made when a new PCB version is ordered. This way we can easily reorder an exact copy of a specific version.
+- REV versions should start at 0
+
+### Project Structure
+
+Your project structure should look like this:
+```
+<ProjectName>
+├── latest
+│   ├── board.kicad_sch
+│   ├── fp-info-cache
+│   ├── fp-lib-table
+│   ├── <ProjectName>.kicad_pcb
+│   ├── <ProjectName>.kicad_prl
+│   ├── <ProjectName>.kicad_pro
+│   ├── <ProjectName>.kicad_sch
+│   └── sym-lib-table
+└── REV<Nb>-<Date>
+    ├── FAB-REV0-<Date>.zip
+    ├── latest-REV<Nb>-<Date>.zip
+    ├── <ProjectName>-REV<Nb>-<Date>.pdf
+    └── <ProjectName>-REV<Nb>-<Date>.step
+```
+
+### Schematics
+-  The first page should include 
 
 ## Changing number of copper layers
 
