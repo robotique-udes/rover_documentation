@@ -1,6 +1,22 @@
 
+# How to Start a new project
 
-# Conventions
+1. Open KiCad
+2. Open the project template
+	- File->Open Project-> PCB/rover/Templates/ProjectTemplate/latest/ProjectTemplate.kicad_pro
+3. Save as the template with the name of your new project (please follow the naming [conventions](KiCad%20Project%20Guidelines.md#Conventions))
+	- File->Save As...->PCB/rover/`<YEAR>`/`<NewProjectName>`
+4. Close the project
+	- File->Close project
+5. Exit KiCad
+6. Open your new project folder in a file explorer
+	- PCB/rover/`<YEAR>`/`<NewProjectName>`
+7. Create a folder named `latest`
+8. Drag and drop all generated file into the new `latest` folder
+	-Your files you look like this [Project structure convention](KiCad%20Project%20Guidelines.md#Project%20Structure)
+
+9. You should now be able to start working on your project
+## Conventions
 - Project name should be *CapitalCamelCase*
 - You should only work in the *latest* folder.
 	- All `REV<Nb>-<Date>` folder should be screenshots made when a new PCB version is ordered. This way we can easily reorder an exact copy of a specific version.
@@ -32,7 +48,7 @@ Your project structure should look like this:
 
 ## Changing number of copper layers
 
-1. Go into the PCB editor
-2. Click on Board Setup: PCB logo with a gear on top of it (should be at the top left of the window)
-3. Go into Board Stackup >> Physical Stackup and change the Copper Layers value to 4
-4. Click "OK"
+10. Go into the PCB editor
+11. Click on Board Setup: PCB logo with a gear on top of it (should be at the top left of the window)
+12. Go into Board Stackup >> Physical Stackup and change the Copper Layers value to 4
+13. Click "OK"
