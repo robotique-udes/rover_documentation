@@ -1,32 +1,34 @@
-
 # How to Start a new project
 
 1. Open KiCad
 2. Open the project template
-	- File->Open Project-> PCB/rover/Templates/ProjectTemplate/latest/ProjectTemplate.kicad_pro
+   - File->Open Project-> PCB/rover/Templates/ProjectTemplate/latest/ProjectTemplate.kicad_pro
 3. Save as the template with the name of your new project (please follow the naming [conventions](KiCad%20Project%20Guidelines.md#Conventions))
-	- File->Save As...->PCB/rover/`<YEAR>`/`<NewProjectName>`
+   - File->Save As...->PCB/rover/`<YEAR>`/`<NewProjectName>`
 4. Close the project
-	- File->Close project
+   - File->Close project
 5. Exit KiCad
 6. Open your new project folder in a file explorer
-	- PCB/rover/`<YEAR>`/`<NewProjectName>`
+   - PCB/rover/`<YEAR>`/`<NewProjectName>`
 7. Create a folder named `latest`
 8. Drag and drop all generated file into the new `latest` folder
-	-Your files you look like this [Project structure convention](KiCad%20Project%20Guidelines.md#Project%20Structure)
+   -Your files you look like this [Project structure convention](KiCad%20Project%20Guidelines.md#Project%20Structure)
 
 9. Open your new project
 10. Open the schematics
 11. Finally configure the variables in File->Schematic Setup->Text Variables
+
 ## Conventions
-- Project name should be *CapitalCamelCase*
-- You should only work in the *latest* folder.
-	- All `REV<Nb>-<Date>` folder should be screenshots made when a new PCB version is ordered. This way we can easily reorder an exact copy of a specific version.
+
+- Project name should be _CapitalCamelCase_
+- You should only work in the _latest_ folder.
+  - All `REV<Nb>-<Date>` folder should be screenshots made when a new PCB version is ordered. This way we can easily reorder an exact copy of a specific version.
 - REV versions should start at 0
 
 ### Project Structure
 
 Your project structure should look like this:
+
 ```
 <ProjectName>
 ├── latest
@@ -46,7 +48,8 @@ Your project structure should look like this:
 ```
 
 ### Schematics
--  The first page should include 
+
+- The first page should include
 
 ## Changing number of copper layers
 
