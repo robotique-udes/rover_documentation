@@ -1,4 +1,3 @@
-
 | PCB Name             | Revision (nb) | Sch.(x) | PCB (x) | Board Ordered (qty) | Parts Ordered (qty) | Ass.(qty) | Installed (qty) | Note                          |
 | -------------------- | ------------- | ------- | ------- | ------------------- | ------------------- | --------- | --------------- | ----------------------------- |
 | HighAmpOutputs       | 0             |         |         | 0/5                 | 0/2                 | 0/2       | 0/1             |                               |
