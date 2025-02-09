@@ -15,7 +15,9 @@
 8. Drag and drop all generated file into the new `latest` folder
 	-Your files you look like this [Project structure convention](KiCad%20Project%20Guidelines.md#Project%20Structure)
 
-9. You should now be able to start working on your project
+9. Open your new project
+10. Open the schematics
+11. Finally configure the variables in File->Schematic Setup->Text Variables
 ## Conventions
 - Project name should be *CapitalCamelCase*
 - You should only work in the *latest* folder.
@@ -48,7 +50,7 @@ Your project structure should look like this:
 
 ## Changing number of copper layers
 
-10. Go into the PCB editor
-11. Click on Board Setup: PCB logo with a gear on top of it (should be at the top left of the window)
-12. Go into Board Stackup >> Physical Stackup and change the Copper Layers value to 4
-13. Click "OK"
+12. Go into the PCB editor
+13. Click on Board Setup: PCB logo with a gear on top of it (should be at the top left of the window)
+14. Go into Board Stackup >> Physical Stackup and change the Copper Layers value to 4
+15. Click "OK"
