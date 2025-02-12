@@ -94,3 +94,31 @@ Your project structure should look like this:
 
 1. Open your schematic in the **KiCad PCB Editor.
 2. Go to **File >> Export >> STEP...** and export with the default settings.
+
+## Testing the library
+
+1. Open a new project
+2. Open the schematic editor
+3. Type "A" or click on the "Add component" in the right tool bar
+4. Find the folder named "RoverLibrary" and double click on a component inside the Rover Library to place it in the schematic
+5. Once the symbol is placed, go into Tools >> Update PCB from Schematic
+6. When prompted, click on "Update PCB", then "Close"
+7. Click anywhere to place the component footprint
+8. Go to View >> 3D Viewer
+9. You should see the component footprint on a PCB
+10. If the component has no 3D body, advise Lucas Bonenfant to resolve the problem
+
+
+
+# JLCPCB order
+## Generate a BOM file from KiCad
+
+1. To export the BOM from KiCAD you first have to go to [Arturo's BOM export script](https://gist.github.com/arturo182/a8c4a4b96907cfccf616a1edb59d0389), download the Zip and unpack it.
+2. For each component that you want JLCPCB to assemble, select the component by clicking it, type E to edit, add a Field. The Name of the field will be LCSC, and the value will be the JLCPCB part number (Ex: C598568).
+3. In the KiCad Schematic Editor, go to Tools >> Generate Legacy Bill of Materials... Then add another BOM Generator Script and select the script previously downloaded and click Generate.
+
+## Generate a BOM file from KiCad
+
+4. In the KiCad PCB Editor, go to File >> Fabrication Outputs >> Component Placement (.pos, .gbr)... Select The format CSV, mm and Single file for board. Then click on Generate Position File.
+5. Open the generated file with Excel or OpenOffice and modify all the columns name to match what JLCPCB wants. Designator, Mid X, Mid Y, Layer, Rotation. THE COLUMN ORDER IS VERY IMPORTANT. You can remove all other column as they are not used by JLCPCB
+6. Export the file in XLS format for JCLPCB
