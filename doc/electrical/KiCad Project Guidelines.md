@@ -24,6 +24,7 @@
 - You should only work in the _latest_ folder.
   - All `REV<Nb>-<Date>` folder should be screenshots made when a new PCB version is ordered. This way we can easily reorder an exact copy of a specific version.
 - REV versions should start at 0
+- The `.pdf` x
 
 ### Project Structure
 
@@ -53,7 +54,43 @@ Your project structure should look like this:
 
 ## Changing number of copper layers
 
-12. Go into the PCB editor
-13. Click on Board Setup: PCB logo with a gear on top of it (should be at the top left of the window)
-14. Go into Board Stackup >> Physical Stackup and change the Copper Layers value to 4
-15. Click "OK"
+1. Go into the PCB editor
+2. Click on Board Setup: PCB logo with a gear on top of it (should be at the top left of the window)
+3. Go into Board Stackup >> Physical Stackup and change the Copper Layers value to 4
+4. Click "OK"
+
+## Exporting fabrication files (Gerber)
+
+1. To export the Gerber files from KiCad, open your PCB design in the **KiCad PCB Editor** (Pcbnew).
+2. Go to **File >> Plot** to open the Plot window.
+3. In the Plot window:
+   - Set the **Plot format** to **Gerber**.
+   - Select the necessary layers for manufacturing. For a standard 4-layer board, select:
+     - F.Cu (Front Copper)
+     - In1.Cu (Inner Layer 1)
+     - In2.Cu (Inner Layer 2)
+     - B.Cu (Back Copper)
+     - F.SilkS (Front Silkscreen)
+     - B.SilkS (Back Silkscreen)
+     - F.Mask (Front Solder Mask)
+     - B.Mask (Back Solder Mask)
+     - Edge.Cuts (Board Outline)
+   - Enable **Use Protel filename extensions**.
+   - Click **Plot** to generate the Gerber files.
+4. To export the drill files, click **Generate Drill Files** in the same Plot window.
+5. In the Drill File Generation window:
+   - Set the **Drill Units** to **Millimeters**.
+   - Select **PTH and NPTH in single file**.
+   - Click **Generate Drill File**.
+6. After the files are generated, navigate to your project folder and locate the **Gerber** and **Drill** files.
+7. Zip all the generated files and submit them to your PCB manufacturer for production.
+
+### Exporting a Schematic as PDF
+
+1. Open your schematic in the **KiCad Schematic Editor** (Eeschema).
+2. Go to **File >> Plot** and select **PDF** as the plot format to export the schematic.
+
+### Exporting a Circuit as STEP
+
+1. Open your schematic in the **KiCad PCB Editor.
+2. Go to **File >> Export >> STEP...** and export with the default settings.
