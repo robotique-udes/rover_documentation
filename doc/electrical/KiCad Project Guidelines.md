@@ -92,7 +92,7 @@ Your project structure should look like this:
 
 ### Exporting a Circuit as STEP
 
-1. Open your schematic in the **KiCad PCB Editor.
+1. Open your schematic in the \*\*KiCad PCB Editor.
 2. Go to **File >> Export >> STEP...** and export with the default settings.
 
 ## Testing the library
@@ -108,9 +108,8 @@ Your project structure should look like this:
 9. You should see the component footprint on a PCB
 10. If the component has no 3D body, advise Lucas Bonenfant to resolve the problem
 
-
-
 # JLCPCB order
+
 ## Generate a BOM file from KiCad
 
 1. To export the BOM from KiCAD you first have to go to [Arturo's BOM export script](https://gist.github.com/arturo182/a8c4a4b96907cfccf616a1edb59d0389), download the Zip and unpack it.
