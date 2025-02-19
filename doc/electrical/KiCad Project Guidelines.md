@@ -42,10 +42,11 @@ Your project structure should look like this:
 │   ├── <ProjectName>.kicad_sch
 │   └── sym-lib-table
 └── REV<Nb>-<Date>
-    ├── FAB-REV<Nb>-<Date>.zip
+    ├── <ProjectName>-REV<Nb>-<Date>.zip
     ├── latest-REV<Nb>-<Date>.zip
     ├── <ProjectName>-REV<Nb>-<Date>.pdf
     └── <ProjectName>-REV<Nb>-<Date>.step
+    └── <ProjectName>-REV<Nb>-<Date>.csv
 ```
 
 ### Schematics
