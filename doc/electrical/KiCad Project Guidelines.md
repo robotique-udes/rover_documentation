@@ -76,9 +76,9 @@ Your project structure should look like this:
      - F.Mask (Front Solder Mask)
      - B.Mask (Back Solder Mask)
      - Edge.Cuts (Board Outline)
-   -  Enable **Check zone fills before plotting**
-   -  Enable **Tent vias**
-   -  Enable **Substract soldermask from silkscreen**
+   - Enable **Check zone fills before plotting**
+   - Enable **Tent vias**
+   - Enable **Substract soldermask from silkscreen**
    - Enable **Use Protel filename extensions**.
    - Click **Plot** to generate the Gerber files.
 4. To export the drill files, click **Generate Drill Files** in the same Plot window.
@@ -125,20 +125,21 @@ Your project structure should look like this:
 4. In the KiCad PCB Editor, go to File >> Fabrication Outputs >> Component Placement (.pos, .gbr)... Select The format CSV, mm and Single file for board. Then click on Generate Position File.
 5. Open the generated file with Excel or OpenOffice and modify all the columns name to match what JLCPCB wants. Designator, Mid X, Mid Y, Layer, Rotation. THE COLUMN ORDER IS VERY IMPORTANT. You can remove all other column as they are not used by JLCPCB
 6. Export the file in XLS format for JCLPCB
+
 # Digikey Order
 
 1. Open the schematic editor
-2. *Tools -> Generate Bill of Materials...*
+2. _Tools -> Generate Bill of Materials..._
 3. Enter theses settings:
-	- Export Tab:
-		- Output file: `../REV<Nb>-<Date>/<ProjectName>-REV<Nb>-<Date>.csv` (Refer to [project structure guidelines](KiCad%20Project%20Guidelines.md#Project%20Structure) for file name) 
-		- Field delimiter: `,`
-		- String delimiter: `"`
-		- Reference delimiter: `,`
-	- Edit Tab: 
-		- Scope: Entire project
-		- Cross-probe action: Highlight
-		- Select only the field in the table below 
+   - Export Tab:
+     - Output file: `../REV<Nb>-<Date>/<ProjectName>-REV<Nb>-<Date>.csv` (Refer to [project structure guidelines](KiCad%20Project%20Guidelines.md#Project%20Structure) for file name)
+     - Field delimiter: `,`
+     - String delimiter: `"`
+     - Reference delimiter: `,`
+   - Edit Tab:
+     - Scope: Entire project
+     - Cross-probe action: Highlight
+     - Select only the field in the table below
 
 | Field       | Value | Group By |
 | ----------- | ----- | -------- |
@@ -148,6 +149,7 @@ Your project structure should look like this:
 | Description | x     |          |
 | Qty         | x     |          |
 | Digikey     | x     |          |
-4. *Apply, Save Schematic & Continue*
-5. *Export*
-6. *OK*
+
+4. _Apply, Save Schematic & Continue_
+5. _Export_
+6. _OK_
