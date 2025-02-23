@@ -1,6 +1,8 @@
-![Onshape_homepage](../../attachements/Mechanical/Onshape_homepage.png)
+# Importer un fichier standard
 
-### Importation de fichiers standards
+![Onshape_homepage](../../attachements\Mechanical\Onshape_homepage.png)
+
+## Importation de fichiers standards
 
 Si vous importez des pièces standards dans vos designs, suivre ces étapes:
 

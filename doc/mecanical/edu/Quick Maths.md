@@ -1,4 +1,6 @@
-Feuille de calcul pour dimmensionnement de moteur: https://usherbrooke.sharepoint.com/:x:/r/sites/Robotique-UdeS/_layouts/15/doc2.aspx?sourcedoc=%7B037C9E1B-E29D-4341-B757-77B940A1D881%7D&file=DimensionMoteurROVUS.xlsx&action=default&mobileredirect=true
+# Feuille de calcul pour dimensionnement de moteur
+
+[Feuille de calcul pour dimensionnement de moteur](https://usherbrooke.sharepoint.com/:x:/r/sites/Robotique-UdeS/_layouts/15/doc2.aspx?sourcedoc=%7B037C9E1B-E29D-4341-B757-77B940A1D881%7D&file=DimensionMoteurROVUS.xlsx&action=default&mobileredirect=true)
 
 Mathématiques de base:
 

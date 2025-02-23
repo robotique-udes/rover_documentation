@@ -1,0 +1,38 @@
+# Importation PCB
+
+Suivre ces étapes pour passer les PCBs de KiCad à OnShape de la bonne manière. De cette façon, les PCB gardent les features nécessaires et permettent à l'équipe de mec d'avoir la denière version à jour de tous les PCBs.
+
+## Importation dans OnShape
+
+1. Exporter le PCB en .step de KiCad
+
+2. Aller dans OnShape et ouvrir le Document _PCB_.
+![OnShape Document PCB](../../attachements/Mechanical/OnShape_Docuemnt_PCB.png)
+
+3. Naviguer dans le dossier approprié pour le PCB:
+    - R2-CAM: associé aux caméras, inclus servoController
+    - R2-ARM: tous les contrôleurs de moteur de bras ou les PCB associés
+    - R2-ELE: Boîte élec du rover et PCB individuels qui n'ont pas d'autres catégories
+    - R2-NAV: PCBs de navigation autonome ou non, inclus les moteurs de propulsion et tout ceux associés.
+
+4. Peser sur le _+_ en bas éa gauche puis _Importer_. Choisir le fichier désiré puis _Ouvrir_
+
+5. Choisir la 2ème option: Combiner dans un même Atelier de pièces, Combine in the same Part Studio. Parfois le document se trouve dans le dossier parent (up un niveau), simplement le drag and drop dans le bon dossier.
+![OnShape Importer PCB](../../attachements/Mechanical/OnShape_Importer_PCB.png)
+
+6. Ouvrir le document et double-cliquer sur la fonction "Import 1" pour sélectionner "Créer un composite". Cette option permet de grouper et faire une seule pièce pour simplifier les assemblages et les importations plus tard. Si il y a des pièces défectueuses, choisir de garder l'erreur si la pièce est importante ou de décocher _Autoriser les pièces défectueuses_ dans le menu si la pièce est pas importante. Souvent les connecteurs micro usb sont en erreurs, mais sont importants, c'est corrrect de garder une erreur dans ce cas.
+![Onshape_Creer_Composite](../../attachements/Mechanical/Onshape_Creer_Composite.png)
+
+7. Créer une vesrion du document et la nommer avec le nom du PCB qui vient d'être ajouté.
+![OnShape_CreateVersion](../../attachements/Mechanical/OnShape_CreateVersion.png)![Onshape_VersionName](../../attachements/Mechanical/Onshape_VersionName.png)
+
+## Mise à jour d'un PCB
+
+1. Importer le nouveau PCB comme mentionné, mais ne pas faire de  version tout de suite, skipper étape 7.
+2. Renommer le nouveau PCB (click-droit sur l'Atelier de pièce, puis Renommer) avec le même nom que l'ancien PCB suivi de _REVX selon le numéro de révision.
+3. Déplacer l'ancien PCB dans l'onglet __OLD_ dans le dossier respectif.
+4. Faire une version avec le nouveau nom du PCB, ex. ARMJ345_REV1
+
+## Ménage des fichiers
+
+De temps à autre, aller voir dans __OLD_ et supprimer les fichiers qui ne sont PLUS utilisés. Si une version antérieur d'un PCB est utilisé dans un projet sur le rover, ne pas le jeter, sinon byebye.

@@ -1,16 +1,20 @@
-Learning center: https://learn.onshape.com/
+# OnShape - Introduction
+
+Learning center: [OnShape Learning Center](https://learn.onshape.com/)
 Absolument tout de OnShape est dans un cours dans le site
 
 Dans l'équipe Rover se trouve le dossier Pièces Standard et le projet Rovus - V2. Toutes les pièces, les assemblages et les systèmes se font dans le projet Rovus - V2, les pièces achetées ou de dimension standard sont importées dans le dossier Pièces Standard.
 
-**_Part Studio_**
+## _Part Studio_
+
 Un Atelier de pièce est un document où on crée des pièces. Voici quelques guidelines
 
 - un atelier de pièce par sous-assemblage ou par groupe de pièce logique
 - maximum de 10 pièces par atelier de pièces
 - Si une pièce se répète dans un assemblage, créer une seule fois la pièce et l'importer plusieurs fois dans l'assemblage.
 
-**_Assemblage_**
+## _Assemblage_
+
 Un assemblage représente la version asemblée de quelques pièces, un sous-système. Un assemblage peut avoi plusieurs autres assemblages, des pièces créée et des pièces standards. Voici quelques guidelines:
 
 - il est mieux de faire plusieurs sous-assemblages qu'un seul gros, comme des blocs LEGO
