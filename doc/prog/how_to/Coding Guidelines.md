@@ -437,6 +437,7 @@ void myFunc(float *pValue)
 ## Class header styling
 
 ### do:
+
 Not optimal for compilation time but nicer for highlighting constants
 
 ```cpp
@@ -450,7 +451,7 @@ class <NAME>
 
 public:
 	<CONSTRUCTORS>
-	
+
 	<PUBLIC METHODS>
 
 private:
@@ -473,11 +474,11 @@ class ArucoDetectionNode : public rclcpp::Node
   private:
     void CB_aruco_publisher(void);
     void CB_aruco_detection(void);
-    
+
     rclcpp::Publisher<rover_msgs::msg::Aruco>::SharedPtr _publisher;
     rclcpp::TimerBase::SharedPtr _timerPublisher;
     rclcpp::TimerBase::SharedPtr _timerDetection;
-    
+
     std::unique_ptr<Detection> _detection;
     std::mutex _mutex;
 };
