@@ -23,7 +23,7 @@ Suivre ces étapes pour passer les PCBs de KiCad à OnShape de la bonne manière
 6. Ouvrir le document et double-cliquer sur la fonction "Import 1" pour sélectionner "Créer un composite". Cette option permet de grouper et faire une seule pièce pour simplifier les assemblages et les importations plus tard. Si il y a des pièces défectueuses, choisir de garder l'erreur si la pièce est importante ou de décocher _Autoriser les pièces défectueuses_ dans le menu si la pièce est pas importante. Souvent les connecteurs micro usb sont en erreurs, mais sont importants, c'est corrrect de garder une erreur dans ce cas.
 ![Onshape_Creer_Composite](../../attachements/Mechanical/Onshape_Creer_Composite.png)
 
-7. Créer une vesrion du document et la nommer avec le nom du PCB qui vient d'être ajouté.
+7. Créer une vesrion du document et la nommer avec le nom du PCB qui vient d'être ajouté. ex: ARMJ345_REV0_AAAA_MM_JJ
 ![OnShape_CreateVersion](../../attachements/Mechanical/OnShape_CreateVersion.png)![Onshape_VersionName](../../attachements/Mechanical/Onshape_VersionName.png)
 
 ## Mise à jour d'un PCB
@@ -31,7 +31,7 @@ Suivre ces étapes pour passer les PCBs de KiCad à OnShape de la bonne manière
 1. Importer le nouveau PCB comme mentionné, mais ne pas faire de  version tout de suite, skipper étape 7.
 2. Renommer le nouveau PCB (click-droit sur l'Atelier de pièce, puis Renommer) avec le même nom que l'ancien PCB suivi de _REVX selon le numéro de révision.
 3. Déplacer l'ancien PCB dans l'onglet __OLD_ dans le dossier respectif.
-4. Faire une version avec le nouveau nom du PCB, ex. ARMJ345_REV1
+4. Faire une version avec le nouveau nom du PCB, ex. ARMJ345_REV1_AAAA_MM_JJ
 
 ## Ménage des fichiers
 
