@@ -1,9 +1,11 @@
 New ip cameras have been bought in autumn 2024
 Default IP is now : `192.168.1.18`
-Default rtsp network address : *rtsp://192.168.1.18:554/1/h264major
+Default rtsp network address : \*rtsp://192.168.1.18:554/1/h264major
+
 # Gstreamer
 
 Run this command to see the stream on your computer
+
 ```
 gst-launch-1.0 rtspsrc location="rtsp://192.168.1.18:554/1/h264major" latency=0 ! decodebin ! videoconvert ! autovideosink sync=false
 ```
