@@ -12,18 +12,21 @@ This is a table of all IP addresses used.
 
 | IP address         | Device              |
 | ------------------ | ------------------- |
+| 192.168.144.1      | Rover's Router      |
 | 192.168.144.20     | Main Rover PC (MCU) |
-| 192.168.144.25     | Camera Main         |
-| 192.168.144.40     | Camera Antenne      |
-| 192.168.144.27     | TO DO               |
+| 192.168.144.30     | Camera Main         |
+| 192.168.144.31     | Camera Antenne      |
+| 192.168.144.50     | Rover M2            |
+| 192.168.144.55     | Base M2             |
 |                    |                     |
 | **Personal PC IP** | **Name**            |
-| 192.168.144.101    | Philippe Michaud    |
+| 192.168.144.69     | Philippe Michaud    |
 | 192.168.144.102    | Anibal Arango       |
 | 192.168.144.103    | Charles-Éloi Lafond |
 | 192.168.144.104    | Marc-Antoine Lépine |
 | 192.168.144.105    | Koralie Lacasse     |
 | 192.168.144.106    | Saria Berger        |
+| 192.168.144.169    | Gabriel Dufresne    |
 
 The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
 
@@ -61,19 +64,18 @@ Web Interface:
 
 - Plug in the 2.4Ghz ethernet cable into your computer
 - Set up your network like this:
-
   - Open ubuntu settings
   - Go to the _network tab_
   - Under wired, click the _gear_ button
   - Go to the _IPv4 tab_
   - Set _IPv4 Method_ to _Manual_
   - Enter these settings under addresses:
-    _ Address: 192.168.144._ (_ should be between 100 and 255 and be reserved in the [IP address table](#IP-address-table))
-    _ Netmask: 255.255.255.0 \* Gateway: Leave empty
+    _ Address: 192.168.144._ (_ should be between 100 and 254 and be reserved in the [IP address table](#IP-address-table))
+    _ Netmask: 255.255.255.0 \* Gateway: 192.168.144.1
     ![network_config.png](../../../attachements/network_config.png)
   - Reset the network interface (set to off than to on)
     - To check if the new config was applied, enter this command in a terminal:
-    - `ifconfig | grep <ENTER ADDRESS> `
+    - `ifconfig | grep <YOUR IP> `
     - If a line like this: `inet <YOUR IP> netmask:255.255.255.0 ...` appear, your all set.
 
 > [!NOTE]
