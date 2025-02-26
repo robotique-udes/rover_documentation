@@ -26,6 +26,7 @@ This is a table of all IP addresses used.
 | 192.168.144.104    | Marc-Antoine Lépine |
 | 192.168.144.105    | Koralie Lacasse     |
 | 192.168.144.106    | Saria Berger        |
+| 192.168.144.169    | Gabriel Dufresne    |
 
 The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
 
