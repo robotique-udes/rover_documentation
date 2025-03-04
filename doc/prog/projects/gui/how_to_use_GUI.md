@@ -42,7 +42,7 @@ Using **Qt Designer**, you can create `.ui` files which gives a visual feedback 
    - Manually with:
      ```bash
      cd ~/ros2_ws/src/rover/rover_gui/ui
-     ./generate_ui.sh # Can probably be added to the CMakeFile
+     ./generate_ui.sh
      ```
 6. A `UI_<file*name>.h` should have generated inside of `rover/rover_gui/ui/include/`
 7. Include the .h file in your app

@@ -435,27 +435,30 @@ void myFunc(float *pValue)
 ```
 
 ## Class header styling
-
-### do:
-
 Not optimal for compilation time but nicer for highlighting constants
+### do:
 
 ```cpp
 class <NAME>
 {
+public:
 	<PUBLIC STATIC CONSTEXPR>
+private:
 	<PRIVATE STATIC CONSTEXPR>
 
+public:
 	<PUBLIC STRUCT/ENUM/UNION/ETC.>
+private:
 	<PRIVATE STRUCT/ENUM/UNION/ETC.>
 
 public:
 	<CONSTRUCTORS>
-
+	
 	<PUBLIC METHODS>
 
 private:
 	<PRIVATE METHODS>
+	
 	<MEMBERS>
 }
 ```
