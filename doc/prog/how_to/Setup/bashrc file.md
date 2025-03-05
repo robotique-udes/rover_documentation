@@ -9,6 +9,7 @@ sudo nano ~/.bashrc
 ```
 
 - Navigate just before this block of code:
+
 ```bash
 # If not running interactively, don't do anything
 case $- in
@@ -16,6 +17,7 @@ case $- in
      *) return;;
 esac
 ```
+
 > [!WARNING]
 > If you add lines after this block of code, they will only be applied in interactive terminal and not when starting app in the background. This will prevent you from starting the rover from the desktop icon.
 

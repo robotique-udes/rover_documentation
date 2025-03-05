@@ -435,7 +435,9 @@ void myFunc(float *pValue)
 ```
 
 ## Class header styling
+
 Not optimal for compilation time but nicer for highlighting constants
+
 ### do:
 
 ```cpp
@@ -453,12 +455,12 @@ private:
 
 public:
 	<CONSTRUCTORS>
-	
+
 	<PUBLIC METHODS>
 
 private:
 	<PRIVATE METHODS>
-	
+
 	<MEMBERS>
 }
 ```
