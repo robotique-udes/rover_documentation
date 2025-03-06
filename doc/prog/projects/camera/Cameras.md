@@ -1,3 +1,6 @@
+[Camera's IP addresses 2025](https://github.com/robotique-udes/rover_documentation/blob/main/doc/prog/projects/communication/Network%20Configuration.md)
+[IP network shortcut](https://github.com/robotique-udes/rover_documentation/blob/main/doc/architecture/lan-network.svg)
+
 New ip cameras have been bought in autumn 2024
 Default IP is now : `192.168.1.18`
 Default rtsp network address : \*rtsp://192.168.1.18:554/1/h264major
