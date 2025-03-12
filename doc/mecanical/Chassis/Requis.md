@@ -13,10 +13,8 @@
 
 - À faire
 
-  - Comment mettre le bras sur le chassis
-    -
-  - Rocker bar (avec Loïc)
-    -
+  - ## Comment mettre le bras sur le chassis
+  - ## Rocker bar (avec Loïc)
   - Pop le hood (ouverture)
     - https://dragonplate.com/economyplate-solid-carbon-fiber-sheet-1_32-x-24-x-24
     - https://ca.tchweb.com/products/510-5038900?srsltid=AfmBOoorrAwb53UU6e8fznquuH42G7UE0K_lHwsi4Tp_EwmrzhJg3_Zr#gref
