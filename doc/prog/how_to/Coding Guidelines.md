@@ -488,3 +488,20 @@ class ArucoDetectionNode : public rclcpp::Node
     std::mutex _mutex;
 };
 ```
+
+
+## One declaration per line
+Better readability and prevent mistakes
+
+### do:
+
+```cpp
+int a = 1;
+int b = 3;
+```
+
+### avoid:
+
+```cpp
+int a = 1, b = 3;
+```
