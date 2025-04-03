@@ -8,7 +8,7 @@ rover
   ┣ launch.json  
   ┗ tasks.json
 ```
-#### Creating the `launch.json` file
+### Creating the `launch.json` file
 The `launch.json` file is where your debuggers are defined. You can have multiple debuggers but only one `launch.json` file. To create more debuggers simply add other configurations.
 
 Here is a template for a c++ debugger in the `launch.json` file:
@@ -54,7 +54,7 @@ Here is an example for a program name, this one launches the rover media server 
 "${workspaceFolder}/../../install/rover_video/lib/rover_video/media_server"
 ```
 
-#### Creating the `tasks.json` file
+### Creating the `tasks.json` file
 While optional, the `tasks.json` file is a valuable tool for automating your debugging workflow. It can allows you to automatically build your ROS2 packages in debug mode each time you launch your custom debugger, streamlining the process and saving you time.
 
 Here is a template for automating the colcon build debug process:
@@ -81,10 +81,10 @@ Here is a template for automating the colcon build debug process:
 }
 ```
 
-#### Using the debugger
+### Using the debugger
 To use the debugger, navigate to the `Run and Debug` tab in VS Code or press `CTRL+SHIFT+D`
 Select your desired debugger from the drop-down menu and click the play button to launch your node. You can then run commands as you would in a regular terminal, observing how they impact your code in real-time. In the event of segmentation faults, the debugger will display the sequence of function calls leading up to the point where the fault occurred, helping you quickly identify the issue.
-##### Breakpoints
+#### Breakpoints
 Breakpoints allow you to pause the execution of your code at specific points for closer inspection. To set a breakpoint, navigate to the desired line of code and click on the red dot in the margin next to the line number. To remove a breakpoint, simply click the red dot again. The next time you run the debugger, execution will stop at the breakpoint, giving you the opportunity to examine variable values, function calls, and the overall state of your program. This helps you troubleshoot and understand the behavior of your code more effectively.
 
 ## Extensions
