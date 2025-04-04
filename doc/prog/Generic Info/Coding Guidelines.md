@@ -455,8 +455,8 @@ class ArucoDetectionNode : public rclcpp::Node
 };
 ```
 
-
 ## One declaration per line
+
 Better readability and prevent mistakes
 
 ### do:
