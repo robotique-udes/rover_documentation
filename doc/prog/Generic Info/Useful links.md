@@ -1,6 +1,6 @@
 - [Setup guide](Setup/1%20Read%20First.md): Guide to get your computer setup for development
 - [Rovus GitHub Project](https://github.com/orgs/robotique-udes/projects/1/views/1): Task management, backlog and test planning
-- [Coding Guidelines](doc/prog/how_to/coding%20guidelines.md): Good practices and styling guide
+- [Coding Guidelines](Coding%20Guidelines.md): Good practices and styling guide
 - [Electrical Standard](../../electrical/Electric%20Standard.md): Like coding guidelines but for electrical elements
 - [Testing for the first time guide](doc/TODO): Guide to start, test and stop the rover safely
 - [Documentation](doc/): Folder with all the documentation

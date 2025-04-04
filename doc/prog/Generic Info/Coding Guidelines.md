@@ -318,45 +318,14 @@ else
     you.doSomething();
 ```
 
-## Comments shouldn't overshoot the 80 character line
-
-### do:
-
-```cpp
-//                                                                            80
-// This is quite a long comment which is alright but only if it's set on       |
-// multiple lines which none overshoots the 80 character limit                 |
-```
-
-### avoid:
-
-```cpp
-//                                                                             |
-// This is quite a long comment which is alright but only if it's set on multip|le lines which none overshoots the 80 character limit
-//                                                                             |
-```
-
-To add the line in your vscode do the following:
-
-- ctrl+shift+p
-- Search for: "Preferences: Open User Settings (JSON)
-- Add these lines as a new entry:
-
-```JSON
-    "editor.rulers": [
-        80,
-        120
-    ],
-```
-
-## Code shouldn't overshoot the 120 character line
+## Code shouldn't overshoot the 130 character line
 
 When breaking on multiple line, make sure all elements take only one line. For example don't put 1 argument on the first line and 2 on the second. Use 3 lines to one for each arguments
 
 ### do:
 
 ```cpp
-                                                                                                                     120
+                                                                                                                     130
 CanDevice(uint16_t id_,                                                                                                |
           CanMaster *canMasterPtr_,                                                                                    |
           void (CanMaster::*callback_)(uint16_t id_, const can_frame *frameMsg_),                                      |
@@ -366,7 +335,7 @@ CanDevice(uint16_t id_,                                                         
 ### avoid:
 
 ```cpp
-                                                                                                                     120
+                                                                                                                     130
 CanDevice(uint16_t id_, CanMaster *canMasterPtr_, void (CanMaster::*callback_)(uint16_t id_, const can_frame *frameMsg_|), rclcpp::Publisher<rover_msgs::msg::CanDeviceStatus>::SharedPtr pub_CanBusState_)
                                                                                                                        |
 ```
@@ -379,12 +348,9 @@ To add the line in your vscode do the following:
 
 ```JSON
     "editor.rulers": [
-        80,
-        120
+        130
     ],
 ```
-
-80 for comments and 120 for code
 
 ## Prefer lambda function over std::bind
 

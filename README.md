@@ -9,7 +9,7 @@ All the documentation is written in markdown files (.md) for simplicity and port
 ## Writing documentation with Obsidian
 
 1. Clone the rover_documentation repository locally
-   1. [Follow this guide to learn how to configure your ssh key and clone a repo](doc/prog/how_to/Setup/1%20Read%20First.md#Git-setup-and-how-to-use)
+   1. [Follow this guide to learn how to configure your ssh key and clone a repo](doc/prog/Generic%20Info/Setup/1%20Read%20First.md#Git-setup-and-how-to-use)
 2. Install Obsidian (available for windows, linux, MacOS)
 
    - **Linux installation**

@@ -15,7 +15,7 @@
 
 # General information
 
-To setup your computer for development, [read this page](prog/how_to/Setup/1%20Read%20First.md). The rest of the documentation takes for granted that you are all set up.
+To setup your computer for development, [read this page](prog/Generic%20Info/Setup/1%20Read%20First.md). The rest of the documentation takes for granted that you are all set up.
 
 ## Useful links
 
@@ -43,7 +43,7 @@ All the code base is regrouped into two distinct repositories:
 
   - The rover_micro repo shouldn't be cloned inside your ROS workspace as a requirement for [micro ros](https://micro.ros.org/) because the repo might include micro ROS projects in the future.
 
-A folder structure example is in [the setup documentation](prog/how_to/Setup/1%20Read%20First.md).
+A folder structure example is in [the setup documentation](prog/Generic%20Info/Setup/1%20Read%20First.md).
 
 The use of [gitsource](https://sourcegit-scm.github.io/) offers a GUI for git (for windows and linux) which is very convenient for new users. It's used by most of the team members, ask any software team member for a quick tutorial if needed.
 
@@ -61,4 +61,4 @@ Dependencies can be install by running the following command
 ~/ros2_ws/src/rover/scripts/provision.sh
 ```
 
-After installing new deps, it's always a good idea to clean your build environnement. If you're [bashrc](prog/how_to/Setup/bashrc%20file.md) is up-to-date, run the `clean` command in a terminal.
+After installing new deps, it's always a good idea to clean your build environnement. If you're [bashrc](prog/Generic%20Info/Setup/bashrc%20file.md) is up-to-date, run the `clean` command in a terminal.
