@@ -26,7 +26,7 @@ Below is the rovus custom PINOUT that should be respected as much as possible\*:
     - RED = Unregulated 24V
     - YELLOW = 12V
     - BLUE = 5V
-    - BLACK/GREY = Regular Ethernet
+    - BLACK/GREY/GREEN = Regular Ethernet (data only)
 
 ## High Current connectors and wire (> 4A)
 
