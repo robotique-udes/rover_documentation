@@ -1,4 +1,3 @@
-
 | Pin | Color  | Name |
 | --- | ------ | ---- |
 | 1   | Red    | 12V  |
@@ -11,4 +10,5 @@
 | 8   | White  | RX+  |
 | 9   | NC     | N/A  |
 | 10  | NC     | N/A  |
+
 ![IM50L35_wiring](../../../attachements/IM50L35_wiring.jpg)
