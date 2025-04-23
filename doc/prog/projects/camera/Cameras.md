@@ -6,6 +6,10 @@ New ip cameras have been bought in autumn 2024
 Default IP is now : `192.168.1.18`
 Default rtsp network address : \*rtsp://192.168.1.18:554/1/h264major
 
+# Setting up camera Settings
+user: admin
+pw: 2xusual
+
 # Gstreamer
 
 Run this command to see the stream on your computer
