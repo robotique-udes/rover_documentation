@@ -45,7 +45,6 @@ This repo contains all microcontroller projects of the rovus team. **Warning: th
     ├── project2
     ├── project3
     ├── ...
-    ├── templates # Used to be more relevant when using MicroROS
     └── lib/
         ├── lib_rover # helpers
         ├── rover_can_lib # canbus
@@ -75,70 +74,71 @@ At the current time there's are only ESP32-S3 (On custom PCB) and ESP32-S2 (On d
 
 ### Platformio.ini
 
-#### Platformio.ini ESP32-S2 (Development board)
-
-```INI
-[env:esp32-s3]
-platform = https://github.com/Jason2866/platform-espressif32.git
-board = nodemcu-32s
-framework = arduino
-monitor_speed = 115200
-monitor_raw = true
-
-lib_deps =
-    rover_can_lib=symlink://../lib/rover_can_lib
-    lib_rover=symlink://../lib/lib_rover
-
-build_unflags =
-    ; Shows more warning messages when compiling and make sure code is compiling
-    ; with c++ version 2020. (required for rover_can_lib)
-    -w CCFLAGS
-    -std=gnu++11
-
-build_flags =
-  -Wall
-  -Wextra
-
-  ; Logging
-  '-D VERBOSE=0'
-  '-D LOGGER_LOWEST_LEVEL=0'
-```
-
 #### Platformio.ini ESP32-S3 (Custom PCB)
 
 This file contains your [platformio project configuration](https://docs.platformio.org/en/latest/projectconf/index.html). For rover projects, your configuration will need to include at least the following elements:
 
 ```INI
-[env:esp32-s3-devkitc-1]
-platform = espressif32
-board = esp32-s3-devkitc-1
-framework = arduino
+[platformio]
+default_envs = release, debug
 
-monitor_speed = 115200
-monitor_raw = true
+[env]
+    platform = https://github.com/Jason2866/platform-espressif32.git#Arduino/IDF5
+    platform_packages = 
+        platformio/framework-arduinoespressif32 @ symlink://../.platformio/packages/framework-arduinoespressif32
+    monitor_speed = 115200
+    monitor_raw = true
+    
+    lib_deps = 
+        rover_can_lib=symlink://../lib/rover_can2
+        lib_rover=symlink://../lib/rover_lib2
 
-lib_deps =
-    rover_can_lib=symlink://../lib/rover_can_lib
-    lib_rover=symlink://../lib/lib_rover
+    build_unflags =
+        -std=gnu++11
+        -Wno-maybe-uninitialized
+        -Wno-unused-function
+        -Wno-unused-but-set-variable
+        -Wno-unused-variable
+        -Wno-deprecated-declarations
+        -Wno-unused-parameter
+        -Wno-sign-compare
 
-build_unflags =
-    ; Shows more warning messages when compiling and make sure code is compiling
-    ; with c++ version 2020. (required for rover_can_lib)
-    -w CCFLAGS
-    -std=gnu++11
+    build_flags =
+        -Ilib
+        -Isrc
+        -std=c++23
+        -Wall
+        -Wextra
+        -D CONFIG_LOG_DEFAULT_LEVEL_ERROR
 
-build_flags =
-    -Wall
-    -Wextra
+    [env:release]
+        board = esp32-s3-devkitc-1
+        framework = arduino
+        build_type = release
+        board_upload.after_reset = watchdog_reset
+        build_flags = 
+            ${env.build_flags}
+            -D RELEASE
+            -D ARDUINO_USB_CDC_ON_BOOT
+            -D ARDUINO_USB_MODE
+            -g03
 
-    ; Make sure to use the internal USB driver on the ESP32-S3 instead of a
-    ; standard UART interface
-    '-D ARDUINO_USB_CDC_ON_BOOT=1'
-    '-D ARDUINO_USB_MODE=1'
+    [env:debug]
+        board = esp32-s3-devkitc-1
+        framework = arduino
+        build_type = debug
+        build_unflags = 
+            ${env.build_unflags}
 
-    ; Logging
-    '-D VERBOSE'
-    '-D LOGGER_LOWEST_LEVEL=0'
+        build_flags = 
+            ${env.build_flags}
+            -D DEBUG
+            -D ARDUINO_USB_CDC_ON_BOOT
+            -D ARDUINO_USB_MODE
+            -D VERBOSE
+            -D GLOBAL_SEVERITY_LEVEL=Logger::eSeverityLevels::DEBUG_
+            -D NODE_BYPASS_SEVERITY_LEVEL=Logger::eSeverityLevels::WARN
+            -g03
 ```
 
 ### Development
