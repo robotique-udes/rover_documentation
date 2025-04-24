@@ -7,6 +7,7 @@ Default IP is now : `192.168.1.18`
 Default rtsp network address : \*rtsp://192.168.1.18:554/1/h264major
 
 # Setting up camera Settings
+
 user: admin
 pw: 2xusual
 

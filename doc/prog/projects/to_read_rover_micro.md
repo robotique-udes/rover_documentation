@@ -84,12 +84,12 @@ default_envs = release, debug
 
 [env]
     platform = https://github.com/Jason2866/platform-espressif32.git#Arduino/IDF5
-    platform_packages = 
+    platform_packages =
         platformio/framework-arduinoespressif32 @ symlink://../.platformio/packages/framework-arduinoespressif32
     monitor_speed = 115200
     monitor_raw = true
-    
-    lib_deps = 
+
+    lib_deps =
         rover_can_lib=symlink://../lib/rover_can2
         lib_rover=symlink://../lib/rover_lib2
 
@@ -116,7 +116,7 @@ default_envs = release, debug
         framework = arduino
         build_type = release
         board_upload.after_reset = watchdog_reset
-        build_flags = 
+        build_flags =
             ${env.build_flags}
             -D RELEASE
             -D ARDUINO_USB_CDC_ON_BOOT
@@ -127,10 +127,10 @@ default_envs = release, debug
         board = esp32-s3-devkitc-1
         framework = arduino
         build_type = debug
-        build_unflags = 
+        build_unflags =
             ${env.build_unflags}
 
-        build_flags = 
+        build_flags =
             ${env.build_flags}
             -D DEBUG
             -D ARDUINO_USB_CDC_ON_BOOT

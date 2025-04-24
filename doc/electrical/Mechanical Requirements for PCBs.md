@@ -1,4 +1,3 @@
-
 These requirements should be considered for the casings, mounting and operation.
 
 - [ ] At least 2 bolt holes which are at least 3.3mm in diameter. There should be a clearance of components of 8mm around the holes to make place for the heat insert. These are used for mounting with M3 bolts.
