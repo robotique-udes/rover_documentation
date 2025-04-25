@@ -11,7 +11,7 @@ Default rtsp network address : \*rtsp://192.168.1.18:554/1/h264major
 Run this command to see the stream on your computer
 
 ```
-gst-launch-1.0 rtspsrc location="rtsp://192.168.1.18:554/1/h264major" latency=0 ! decodebin ! videoconvert ! autovideosink sync=false
+gst-launch-1.0 rtspsrc location="rtsp://192.168.144.30:554/1/h264major" latency=0 ! decodebin ! videoconvert ! autovideosink sync=false
 ```
 
 # API

@@ -1,7 +1,6 @@
 # Network Configuration
 
-Here you will find the ip addresses and login info of each antenna as well as all the used IP addresses for all components.
-
+Here you will find the IP addresses and login info of each antenna as well as all the used IP addresses for all components.
 ## IP address table
 
 The rover is on the 192.168.144.0/24 subnet
@@ -16,16 +15,21 @@ This is a table of all IP addresses used.
 | 192.168.144.20     | Main Rover PC (MCU) |
 | 192.168.144.30     | Camera Main         |
 | 192.168.144.31     | Camera Antenne      |
+| 192.168.144.32     | Camera Front-Side   |
+| 192.168.144.35     | Camera Arm-Top      |
+| 192.168.144.36     | Camera Arm-Side     |
+|                    |                     |
 | 192.168.144.50     | Rover M2            |
 | 192.168.144.55     | Base M2             |
 |                    |                     |
 | **Personal PC IP** | **Name**            |
-| 192.168.144.69     | Philippe Michaud    |
+| 192.168.144.101    | Philippe Michaud    |
 | 192.168.144.102    | Anibal Arango       |
 | 192.168.144.103    | Charles-Éloi Lafond |
 | 192.168.144.104    | Marc-Antoine Lépine |
 | 192.168.144.105    | Koralie Lacasse     |
 | 192.168.144.106    | Saria Berger        |
+| 192.168.144.113    | Alexandre Tonneau   |
 | 192.168.144.169    | Gabriel Dufresne    |
 
 The ROS_DOMAIN_ID must be 69 on all computers to bridge the ROS communication over between computers :
@@ -87,13 +91,3 @@ Web Interface:
 > Problems have been notices when using a cheap router with ROS sending a lot of small packets very fast (joy msgs). This connection can be buggy and flaky
 
 Its possible to connect to the rover without the big base station antenna, it's very useful for small range tests. There's a small router configured as wireless LAN access point. When connected to this wifi network, you'll be able to access all the LAN network off the rover (M2.4, MCU, Cams, etc.)
-
-Connection information:
-
-- Router configuration interface
-
-  - password: rover
-
-- Wifi network
-  - SSID: rovus_low_range
-  - password: roverrover

@@ -56,8 +56,9 @@ All ROS nodes are now by default running on the rover when the computer has powe
 Use these commands to stop this service or to restart it (without rebooting)
 
 ```bash
-rover_stop # Kill the service
-rover_start # Start the service
+stop # Kill the service
+start # Start the service
+log # see logs of all services
 ```
 
 ### Setup
@@ -67,34 +68,31 @@ To configure/install the service run the following commands:
 1. Open a text editor
 
 ```bash
-sudo nano /etc/systemd/system/rover_ros_autostart.service
+sudo nano /etc/systemd/system/rover.service
 ```
 
 2. Paste the following script and change the "**USERNAME**":
 
 ```bash
 [Unit]
-Description="rover layer"
+Description="rover launch file"
 
 [Service]
-Environment="HOME=**USERNAME**"
+Environment="HOME=/home/rover"
 Environment="ROS_DOMAIN_ID=69"
-   ExecStart=/home/**USERNAME**/ros2_ws/src/rover/rover_msgs/script/auto_start_rover.sh
+ExecStart=/home/rover/ros2_ws/src/rover/rover_msgs/script/rover_service.sh
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-
-ExecStart=/opt/ros/humble/bin/ros2 launch rover_drive_train drive_train.launch.py
-ExecStart=/opt/ros/humble/bin/ros2 run rover_gui main_gui
 ```
 
 3. Reload systemd to add the script and enable it
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable rover_ros_autostart.service
-sudo systemctl start rover_ros_autostart.service
+sudo systemctl enable rover.service
+sudo systemctl start rover.service
 ```
 
 ### Disable auto start
@@ -102,16 +100,16 @@ sudo systemctl start rover_ros_autostart.service
 When debugging it'll probably be nice to disable the service, here's how you can do it:
 
 ```bash
-sudo systemctl mask rover_ros_autostart.service
+sudo systemctl stop rover.service
 sudo systemctl daemon-reload
 ```
 
 3. Enable auto start
 
 ```bash
-sudo systemctl unmask rover_ros_autostart.service
+sudo systemctl unmask rover.service
 sudo systemctl daemon-reload
-sudo systemctl start rover_ros_autostart.service
+sudo systemctl start rover.service
 ```
 
 4. [Setup the can](../can/can_setup.md)
