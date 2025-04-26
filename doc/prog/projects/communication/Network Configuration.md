@@ -1,6 +1,7 @@
 # Network Configuration
 
 Here you will find the IP addresses and login info of each antenna as well as all the used IP addresses for all components.
+
 ## IP address table
 
 The rover is on the 192.168.144.0/24 subnet
