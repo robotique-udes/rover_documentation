@@ -24,7 +24,6 @@
 - You should only work in the _latest_ folder.
   - All `REV<Nb>-<Date>` folder should be screenshots made when a new PCB version is ordered. This way we can easily reorder an exact copy of a specific version.
 - REV versions should start at 0
-- The `.pdf` x
 
 ### Project Structure
 
