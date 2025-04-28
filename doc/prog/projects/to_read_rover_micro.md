@@ -83,7 +83,7 @@ This file contains your [platformio project configuration](https://docs.platform
 default_envs = release, debug
 
 [env]
-    platform = https://github.com/Jason2866/platform-espressif32.git#Arduino/IDF5
+    platform = https://github.com/Jason2866/platform-espressif32.git#Arduino/IDF53
     platform_packages =
         platformio/framework-arduinoespressif32 @ symlink://../.platformio/packages/framework-arduinoespressif32
     monitor_speed = 115200
