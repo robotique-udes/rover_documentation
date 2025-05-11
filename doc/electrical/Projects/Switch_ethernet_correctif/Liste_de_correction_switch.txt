@@ -9,6 +9,7 @@ Switch 3:
 		*C66 (FAITE) (A TESTER)
 		*C46 (FAITE) (A TESTER)
 		*C51
+		*Patch Diode
 	-Pièce pas à être souder?:
 		*C79
 		*R69
