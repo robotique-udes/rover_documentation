@@ -5,11 +5,8 @@ This GUI application leverages Cesium's Ion platform to render interactive 3D ma
 ## Acquiring a Cesium Ion Access Token
 
 1. **Sign up or log in** to your Cesium Ion account.
-    
 2. Navigate to the [Access Tokens](https://cesium.com/learn/ion/cesium-ion-access-tokens/) page.
-    
 3. **Create a new token** or copy an existing one.
-    
 
 ## Configuring Your Environment
 
