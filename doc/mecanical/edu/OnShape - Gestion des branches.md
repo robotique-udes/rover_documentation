@@ -9,9 +9,8 @@ Les branches sont utilisées pour travailler en parallèle sur une gros projet. 
 - Mât: comprends le pivot et le rocker bar, la camera principale, l'antenne et le holder des sensors
 - Elec: comprends toute la boite électrique et tous les PCB et leur cover
 - Side: comprends les side quests et projets en dehors du rover, panneeau de bouton et base station par exemple
-  
 
- Pour recompartimenter un sous-projet, il faut écrire SOUS-PROJET:SOUS-SOUS-PROJET, ex: BRAS: JLIN.
+Pour recompartimenter un sous-projet, il faut écrire SOUS-PROJET:SOUS-SOUS-PROJET, ex: BRAS: JLIN.
 
 ## Créer une branche
 
