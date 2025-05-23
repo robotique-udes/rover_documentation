@@ -3,14 +3,13 @@
 Les branches sont utilisées pour travailler en parallèle sur une gros projet. En premier, il faut segmenter le projets et compartimenter les assemblages. Dans le rover les principales parties sont:
 
 - Main: assemblage principal, intégration des sous-systèmes, idéalement pas de cad dans cette branche
-- Chassis: comprends tout le chassis, le tube de rockers, le top et le couvercle.
-- Rockers: comprends les roues, les rockers et le mouvement autour.
-- Bras: comprends tous les joints du bras, la pince et la plaque pour aller sur le chassis
-- Mât: comprends le pivot et le rocker bar, la camera principale, l'antenne et le holder des sensors
-- Elec: comprends toute la boite électrique et tous les PCB et leur cover
-- Side: comprends les side quests et projets en dehors du rover, panneeau de bouton et base station par exemple
+- CHASSIS: comprends tout le chassis, le tube de rockers, le top et le couvercle.
+- ROCKER: comprends les roues, les rockers et le mouvement autour.
+- ARM: comprends tous les joints du bras, la pince et la plaque pour aller sur le chassis
+- ELEC: comprends toute la boite électrique et tous les PCB et leur cover
+- SIDE: comprends les side quests et projets en dehors du rover, panneeau de bouton et base station par exemple
 
-Pour recompartimenter un sous-projet, il faut écrire SOUS-PROJET:SOUS-SOUS-PROJET, ex: BRAS: JLIN.
+ Pour recompartimenter un sous-projet, il faut écrire SOUS-PROJET:SOUS-SOUS-PROJET, ex: BRAS: JLIN.
 
 ## Créer une branche
 
