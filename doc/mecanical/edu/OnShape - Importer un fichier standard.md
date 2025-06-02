@@ -1,6 +1,6 @@
 # Importer un fichier standard
 
-![Onshape_homepage](../../attachements\Mechanical\Onshape_homepage.png)
+![Onshape_Homepage](../../attachements/Mechanical/Onshape_homepage.png)
 
 ## Importation de fichiers standards
 
